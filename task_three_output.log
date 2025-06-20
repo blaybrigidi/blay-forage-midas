@@ -1,0 +1,1213 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.jpmc:midas-core >-------------------------
+[INFO] Building midas-core 1.0.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ midas-core ---
+[INFO] skip non existing resourceDirectory /Users/blay/Desktop/blay-forage-midas/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/blay/Desktop/blay-forage-midas/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ midas-core ---
+[INFO] Changes detected - recompiling the module! :input tree
+[INFO] Compiling 9 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ midas-core ---
+[INFO] Copying 5 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.11.0:testCompile (default-testCompile) @ midas-core ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 10 source files with javac [debug release 17] to target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.1.2:test (default-test) @ midas-core ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.jpmc.midascore.TaskThreeTests
+10:56:13.041 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.jpmc.midascore.TaskThreeTests]: TaskThreeTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:56:13.088 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.jpmc.midascore.MidasCoreApplication for test class com.jpmc.midascore.TaskThreeTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2025-06-20T10:56:13.518-07:00  INFO 9281 --- [           main] k.utils.Log4jControllerRegistration$     : Registered kafka:type=kafka.Log4jController MBean
+2025-06-20T10:56:13.533-07:00  INFO 9281 --- [           main] org.apache.zookeeper.common.X509Util     : Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2025-06-20T10:56:13.591-07:00  INFO 9281 --- [-kit-executor-1] kafka.server.ControllerServer            : Formatting /var/folders/75/jtzvphp97m3c952tknqr_8th0000gn/T/kafka-1556568874203665720/controller_0 with metadata.version 3.3-IV0.
+2025-06-20T10:56:13.592-07:00  INFO 9281 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Transition from SHUTDOWN to STARTING
+2025-06-20T10:56:13.592-07:00  INFO 9281 --- [-kit-executor-2] kafka.server.ControllerServer            : [ControllerServer id=0] Starting controller
+2025-06-20T10:56:13.592-07:00  INFO 9281 --- [-kit-executor-3] kafka.server.SharedServer                : [SharedServer id=0] Starting SharedServer
+2025-06-20T10:56:13.602-07:00  INFO 9281 --- [-kit-executor-2] o.a.k.s.network.EndpointReadyFutures     : authorizerStart completed for endpoint CONTROLLER. Endpoint is now READY.
+2025-06-20T10:56:13.645-07:00  INFO 9281 --- [-kit-executor-3] kafka.log.UnifiedLog$                    : [LogLoader partition=__cluster_metadata-0, dir=/var/folders/75/jtzvphp97m3c952tknqr_8th0000gn/T/kafka-1556568874203665720/controller_0] Loading producer state till offset 0 with message format version 2
+2025-06-20T10:56:13.645-07:00  INFO 9281 --- [-kit-executor-3] kafka.log.UnifiedLog$                    : [LogLoader partition=__cluster_metadata-0, dir=/var/folders/75/jtzvphp97m3c952tknqr_8th0000gn/T/kafka-1556568874203665720/controller_0] Reloading from producer snapshot and rebuilding producer state from offset 0
+2025-06-20T10:56:13.645-07:00  INFO 9281 --- [-kit-executor-3] kafka.log.UnifiedLog$                    : [LogLoader partition=__cluster_metadata-0, dir=/var/folders/75/jtzvphp97m3c952tknqr_8th0000gn/T/kafka-1556568874203665720/controller_0] Producer state recovery took 0ms for snapshot load and 0ms for segment recovery from offset 0
+2025-06-20T10:56:13.663-07:00  INFO 9281 --- [-kit-executor-3] kafka.raft.KafkaMetadataLog$             : Initialized snapshots with IDs SortedSet() from /var/folders/75/jtzvphp97m3c952tknqr_8th0000gn/T/kafka-1556568874203665720/controller_0/__cluster_metadata-0
+2025-06-20T10:56:13.685-07:00  INFO 9281 --- [piration-reaper] ExpirationService$ExpiredOperationReaper : [raft-expiration-reaper]: Starting
+2025-06-20T10:56:13.704-07:00  INFO 9281 --- [-kit-executor-3] org.apache.kafka.raft.QuorumState        : [RaftManager id=0] Completed transition to Unattached(epoch=0, voters=[0], electionTimeoutMs=1650) from null
+2025-06-20T10:56:13.709-07:00  INFO 9281 --- [-kit-executor-3] org.apache.kafka.raft.QuorumState        : [RaftManager id=0] Completed transition to CandidateState(localId=0, epoch=1, retries=1, voteStates={0=GRANTED}, highWatermark=Optional.empty, electionTimeoutMs=1832) from Unattached(epoch=0, voters=[0], electionTimeoutMs=1650)
+2025-06-20T10:56:13.713-07:00  INFO 9281 --- [-kit-executor-3] org.apache.kafka.raft.QuorumState        : [RaftManager id=0] Completed transition to Leader(localId=0, epoch=1, epochStartOffset=0, highWatermark=Optional.empty, voterStates={0=ReplicaState(nodeId=0, endOffset=Optional.empty, lastFetchTimestamp=-1, lastCaughtUpTimestamp=-1, hasAcknowledgedLeader=true)}) from CandidateState(localId=0, epoch=1, retries=1, voteStates={0=GRANTED}, highWatermark=Optional.empty, electionTimeoutMs=1832)
+2025-06-20T10:56:13.752-07:00  INFO 9281 --- [-kit-executor-2] kafka.network.ConnectionQuotas           : Updated connection-accept-rate max connection creation rate to 2147483647
+2025-06-20T10:56:13.766-07:00  INFO 9281 --- [-kit-executor-2] kafka.network.DataPlaneAcceptor          : Awaiting socket connections on localhost:52968.
+2025-06-20T10:56:13.766-07:00  INFO 9281 --- [-kit-executor-2] kafka.network.DataPlaneAcceptor          : Opened wildcard endpoint localhost:52968
+2025-06-20T10:56:13.773-07:00  INFO 9281 --- [-kit-executor-2] kafka.network.SocketServer               : [SocketServer listenerType=CONTROLLER, nodeId=0] Created data-plane acceptor and processors for endpoint : ListenerName(CONTROLLER)
+2025-06-20T10:56:13.775-07:00  INFO 9281 --- [-request-thread] kafka.raft.RaftSendThread                : [kafka-0-raft-outbound-request-thread]: Starting
+2025-06-20T10:56:13.775-07:00  INFO 9281 --- [-raft-io-thread] k.raft.KafkaRaftManager$RaftIoThread     : [kafka-0-raft-io-thread]: Starting
+2025-06-20T10:56:13.781-07:00  INFO 9281 --- [-raft-io-thread] org.apache.kafka.raft.LeaderState        : [RaftManager id=0] High watermark set to LogOffsetMetadata(offset=1, metadata=Optional[(segmentBaseOffset=0,relativePositionInSegment=91)]) for the first time for epoch 1 based on indexOfHw 0 and voters [ReplicaState(nodeId=0, endOffset=Optional[LogOffsetMetadata(offset=1, metadata=Optional[(segmentBaseOffset=0,relativePositionInSegment=91)])], lastFetchTimestamp=-1, lastCaughtUpTimestamp=-1, hasAcknowledgedLeader=true)]
+2025-06-20T10:56:13.783-07:00  INFO 9281 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] initializeNewPublishers: The loader is still catching up because we have loaded up to offset -1, but the high water mark is 1
+2025-06-20T10:56:13.784-07:00  INFO 9281 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Starting broker
+2025-06-20T10:56:13.784-07:00  INFO 9281 --- [-kit-executor-2] kafka.server.ControllerServer            : [ControllerServer id=0] Waiting for controller quorum voters future
+2025-06-20T10:56:13.784-07:00  INFO 9281 --- [-kit-executor-2] kafka.server.ControllerServer            : [ControllerServer id=0] Finished waiting for controller quorum voters future
+2025-06-20T10:56:13.788-07:00  INFO 9281 --- [-raft-io-thread] org.apache.kafka.raft.KafkaRaftClient    : [RaftManager id=0] Registered the listener org.apache.kafka.image.loader.MetadataLoader@1895154647
+2025-06-20T10:56:13.790-07:00  INFO 9281 --- [nelReaper-Fetch] lientQuotaManager$ThrottledChannelReaper : [broker-0-ThrottledChannelReaper-Fetch]: Starting
+2025-06-20T10:56:13.791-07:00  INFO 9281 --- [lReaper-Produce] lientQuotaManager$ThrottledChannelReaper : [broker-0-ThrottledChannelReaper-Produce]: Starting
+2025-06-20T10:56:13.792-07:00  INFO 9281 --- [lReaper-Request] lientQuotaManager$ThrottledChannelReaper : [broker-0-ThrottledChannelReaper-Request]: Starting
+2025-06-20T10:56:13.792-07:00  INFO 9281 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] maybePublishMetadata(LOG_DELTA): The loader is still catching up because we have not loaded a controller record as of offset 0 and high water mark is 1
+2025-06-20T10:56:13.792-07:00  INFO 9281 --- [trollerMutation] lientQuotaManager$ThrottledChannelReaper : [broker-0-ThrottledChannelReaper-ControllerMutation]: Starting
+2025-06-20T10:56:13.798-07:00  INFO 9281 --- [-kit-executor-2] o.a.kafka.controller.QuorumController    : [QuorumController id=0] Creating new QuorumController with clusterId IOFVI4sRRHGuYmGtBTr0DQ.
+2025-06-20T10:56:13.798-07:00  INFO 9281 --- [-raft-io-thread] org.apache.kafka.raft.KafkaRaftClient    : [RaftManager id=0] Registered the listener org.apache.kafka.controller.QuorumController$QuorumMetaLogListener@1469269915
+2025-06-20T10:56:13.798-07:00  INFO 9281 --- [nelReaper-Fetch] lientQuotaManager$ThrottledChannelReaper : [controller-0-ThrottledChannelReaper-Fetch]: Starting
+2025-06-20T10:56:13.798-07:00  INFO 9281 --- [lReaper-Produce] lientQuotaManager$ThrottledChannelReaper : [controller-0-ThrottledChannelReaper-Produce]: Starting
+2025-06-20T10:56:13.798-07:00  INFO 9281 --- [lReaper-Request] lientQuotaManager$ThrottledChannelReaper : [controller-0-ThrottledChannelReaper-Request]: Starting
+2025-06-20T10:56:13.798-07:00  INFO 9281 --- [trollerMutation] lientQuotaManager$ThrottledChannelReaper : [controller-0-ThrottledChannelReaper-ControllerMutation]: Starting
+2025-06-20T10:56:13.799-07:00  INFO 9281 --- [0-event-handler] o.a.kafka.controller.QuorumController    : [QuorumController id=0] Becoming the active controller at epoch 1, next write offset 1.
+2025-06-20T10:56:13.800-07:00  INFO 9281 --- [-kit-executor-3] kafka.log.LogManager                     : Log directory /var/folders/75/jtzvphp97m3c952tknqr_8th0000gn/T/kafka-1556568874203665720/broker_0_data0 not found, creating it.
+2025-06-20T10:56:13.801-07:00  WARN 9281 --- [0-event-handler] o.a.kafka.controller.QuorumController    : [QuorumController id=0] Performing controller activation. The metadata log appears to be empty. Appending 1 bootstrap record(s) in metadata transaction at metadata.version 3.6-IV2 from bootstrap source 'testkit'. Setting the ZK migration state to NONE since this is a de-novo KRaft cluster.
+2025-06-20T10:56:13.801-07:00  INFO 9281 --- [0-event-handler] o.a.k.controller.OffsetControlManager    : [QuorumController id=0] Replayed BeginTransactionRecord(name='Bootstrap records') at offset 1.
+2025-06-20T10:56:13.802-07:00  INFO 9281 --- [0-event-handler] o.a.k.controller.FeatureControlManager   : [QuorumController id=0] Replayed a FeatureLevelRecord setting metadata version to 3.6-IV2
+2025-06-20T10:56:13.802-07:00  INFO 9281 --- [0-event-handler] o.a.k.controller.OffsetControlManager    : [QuorumController id=0] Replayed EndTransactionRecord() at offset 4.
+2025-06-20T10:56:13.805-07:00  INFO 9281 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Waiting for controller quorum voters future
+2025-06-20T10:56:13.805-07:00  INFO 9281 --- [per-0-AlterAcls] perationPurgatory$ExpiredOperationReaper : [ExpirationReaper-0-AlterAcls]: Starting
+2025-06-20T10:56:13.805-07:00  INFO 9281 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Finished waiting for controller quorum voters future
+2025-06-20T10:56:13.808-07:00  INFO 9281 --- [channel-manager] k.s.BrokerToControllerRequestThread      : [broker-0-to-controller-forwarding-channel-manager]: Starting
+2025-06-20T10:56:13.808-07:00  INFO 9281 --- [channel-manager] k.s.BrokerToControllerRequestThread      : [broker-0-to-controller-forwarding-channel-manager]: Recorded new controller, from now on will use node localhost:52968 (id: 0 rack: null)
+2025-06-20T10:56:13.810-07:00  INFO 9281 --- [-kit-executor-2] kafka.server.ControllerServer            : [ControllerServer id=0] Waiting for the controller metadata publishers to be installed
+2025-06-20T10:56:13.810-07:00  INFO 9281 --- [-kit-executor-2] kafka.server.ControllerServer            : [ControllerServer id=0] Finished waiting for the controller metadata publishers to be installed
+2025-06-20T10:56:13.810-07:00  INFO 9281 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] initializeNewPublishers: The loader finished catching up to the current high water mark of 1
+2025-06-20T10:56:13.810-07:00  INFO 9281 --- [-kit-executor-2] kafka.network.SocketServer               : [SocketServer listenerType=CONTROLLER, nodeId=0] Enabling request processing.
+2025-06-20T10:56:13.811-07:00  INFO 9281 --- [-kit-executor-2] kafka.server.ControllerServer            : [ControllerServer id=0] Waiting for all of the authorizer futures to be completed
+2025-06-20T10:56:13.812-07:00  INFO 9281 --- [-kit-executor-2] kafka.server.ControllerServer            : [ControllerServer id=0] Finished waiting for all of the authorizer futures to be completed
+2025-06-20T10:56:13.812-07:00  INFO 9281 --- [-kit-executor-2] kafka.server.ControllerServer            : [ControllerServer id=0] Waiting for all of the SocketServer Acceptors to be started
+2025-06-20T10:56:13.812-07:00  INFO 9281 --- [-kit-executor-2] kafka.server.ControllerServer            : [ControllerServer id=0] Finished waiting for all of the SocketServer Acceptors to be started
+2025-06-20T10:56:13.813-07:00  INFO 9281 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] InitializeNewPublishers: initializing SnapshotGenerator with a snapshot at offset 0
+2025-06-20T10:56:13.813-07:00  INFO 9281 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] InitializeNewPublishers: initializing FeaturesPublisher with a snapshot at offset 0
+2025-06-20T10:56:13.813-07:00  INFO 9281 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] InitializeNewPublishers: initializing DynamicConfigPublisher controller id=0 with a snapshot at offset 0
+2025-06-20T10:56:13.813-07:00  INFO 9281 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] InitializeNewPublishers: initializing DynamicClientQuotaPublisher controller id=0 with a snapshot at offset 0
+2025-06-20T10:56:13.813-07:00  INFO 9281 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] InitializeNewPublishers: initializing ScramPublisher controller id=0 with a snapshot at offset 0
+2025-06-20T10:56:13.814-07:00  INFO 9281 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] InitializeNewPublishers: initializing DelegationTokenPublisher controller id=0 with a snapshot at offset 0
+2025-06-20T10:56:13.814-07:00  INFO 9281 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] InitializeNewPublishers: initializing ControllerMetadataMetricsPublisher with a snapshot at offset 0
+2025-06-20T10:56:13.815-07:00  INFO 9281 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] InitializeNewPublishers: initializing AclPublisher controller id=0 with a snapshot at offset 0
+2025-06-20T10:56:13.819-07:00  INFO 9281 --- [-kit-executor-3] kafka.network.ConnectionQuotas           : Updated connection-accept-rate max connection creation rate to 2147483647
+2025-06-20T10:56:13.820-07:00  INFO 9281 --- [-kit-executor-3] kafka.network.DataPlaneAcceptor          : Awaiting socket connections on localhost:52969.
+2025-06-20T10:56:13.820-07:00  INFO 9281 --- [-kit-executor-3] kafka.network.DataPlaneAcceptor          : Opened wildcard endpoint localhost:52969
+2025-06-20T10:56:13.821-07:00  INFO 9281 --- [-kit-executor-3] kafka.network.SocketServer               : [SocketServer listenerType=BROKER, nodeId=0] Created data-plane acceptor and processors for endpoint : ListenerName(EXTERNAL)
+2025-06-20T10:56:13.822-07:00  INFO 9281 --- [channel-manager] k.s.BrokerToControllerRequestThread      : [broker-0-to-controller-alter-partition-channel-manager]: Starting
+2025-06-20T10:56:13.822-07:00  INFO 9281 --- [channel-manager] k.s.BrokerToControllerRequestThread      : [broker-0-to-controller-alter-partition-channel-manager]: Recorded new controller, from now on will use node localhost:52968 (id: 0 rack: null)
+2025-06-20T10:56:13.830-07:00  INFO 9281 --- [eaper-0-Produce] perationPurgatory$ExpiredOperationReaper : [ExpirationReaper-0-Produce]: Starting
+2025-06-20T10:56:13.831-07:00  INFO 9281 --- [nReaper-0-Fetch] perationPurgatory$ExpiredOperationReaper : [ExpirationReaper-0-Fetch]: Starting
+2025-06-20T10:56:13.831-07:00  INFO 9281 --- [0-DeleteRecords] perationPurgatory$ExpiredOperationReaper : [ExpirationReaper-0-DeleteRecords]: Starting
+2025-06-20T10:56:13.831-07:00  INFO 9281 --- [r-0-ElectLeader] perationPurgatory$ExpiredOperationReaper : [ExpirationReaper-0-ElectLeader]: Starting
+2025-06-20T10:56:13.831-07:00  INFO 9281 --- [r-0-RemoteFetch] perationPurgatory$ExpiredOperationReaper : [ExpirationReaper-0-RemoteFetch]: Starting
+2025-06-20T10:56:13.841-07:00  INFO 9281 --- [per-0-Heartbeat] perationPurgatory$ExpiredOperationReaper : [ExpirationReaper-0-Heartbeat]: Starting
+2025-06-20T10:56:13.841-07:00  INFO 9281 --- [per-0-Rebalance] perationPurgatory$ExpiredOperationReaper : [ExpirationReaper-0-Rebalance]: Starting
+2025-06-20T10:56:13.856-07:00  INFO 9281 --- [channel-manager] k.s.BrokerToControllerRequestThread      : [broker-0-to-controller-heartbeat-channel-manager]: Starting
+2025-06-20T10:56:13.857-07:00  INFO 9281 --- [channel-manager] k.s.BrokerToControllerRequestThread      : [broker-0-to-controller-heartbeat-channel-manager]: Recorded new controller, from now on will use node localhost:52968 (id: 0 rack: null)
+2025-06-20T10:56:13.861-07:00  INFO 9281 --- [r-event-handler] kafka.server.BrokerLifecycleManager      : [BrokerLifecycleManager id=0] Incarnation PUSi2CY8Q1a8aj3DxVmLXQ of broker 0 in cluster IOFVI4sRRHGuYmGtBTr0DQ is now STARTING.
+2025-06-20T10:56:13.869-07:00  INFO 9281 --- [per-0-AlterAcls] perationPurgatory$ExpiredOperationReaper : [ExpirationReaper-0-AlterAcls]: Starting
+2025-06-20T10:56:13.877-07:00  INFO 9281 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Waiting for the broker metadata publishers to be installed
+2025-06-20T10:56:13.877-07:00  INFO 9281 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Finished waiting for the broker metadata publishers to be installed
+2025-06-20T10:56:13.877-07:00  INFO 9281 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] InitializeNewPublishers: initializing BrokerMetadataPublisher with a snapshot at offset 4
+2025-06-20T10:56:13.877-07:00  INFO 9281 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Waiting for the controller to acknowledge that we are caught up
+2025-06-20T10:56:13.877-07:00  INFO 9281 --- [r-event-handler] k.s.metadata.BrokerMetadataPublisher     : [BrokerMetadataPublisher id=0] Publishing initial metadata at offset OffsetAndEpoch(offset=4, epoch=1) with metadata.version 3.6-IV2.
+2025-06-20T10:56:13.877-07:00  INFO 9281 --- [r-event-handler] kafka.log.LogManager                     : Loading logs from log dirs ArraySeq(/var/folders/75/jtzvphp97m3c952tknqr_8th0000gn/T/kafka-1556568874203665720/broker_0_data0)
+2025-06-20T10:56:13.878-07:00  INFO 9281 --- [r-event-handler] kafka.log.LogManager                     : No logs found to be loaded in /var/folders/75/jtzvphp97m3c952tknqr_8th0000gn/T/kafka-1556568874203665720/broker_0_data0
+2025-06-20T10:56:13.880-07:00  INFO 9281 --- [r-event-handler] kafka.log.LogManager                     : Loaded 0 logs in 3ms
+2025-06-20T10:56:13.880-07:00  INFO 9281 --- [r-event-handler] kafka.log.LogManager                     : Starting log cleanup with a period of 300000 ms.
+2025-06-20T10:56:13.880-07:00  INFO 9281 --- [r-event-handler] kafka.log.LogManager                     : Starting log flusher with a default period of 9223372036854775807 ms.
+2025-06-20T10:56:13.885-07:00  INFO 9281 --- [r-event-handler] kafka.log.LogCleaner                     : Starting the log cleaner
+2025-06-20T10:56:13.885-07:00  INFO 9281 --- [0-event-handler] o.a.k.controller.ClusterControlManager   : [QuorumController id=0] Replayed initial RegisterBrokerRecord for broker 0: RegisterBrokerRecord(brokerId=0, isMigratingZkBroker=false, incarnationId=PUSi2CY8Q1a8aj3DxVmLXQ, brokerEpoch=5, endPoints=[BrokerEndpoint(name='EXTERNAL', host='localhost', port=52969, securityProtocol=0)], features=[BrokerFeature(name='metadata.version', minSupportedVersion=1, maxSupportedVersion=14)], rack=null, fenced=true, inControlledShutdown=false)
+2025-06-20T10:56:13.887-07:00  INFO 9281 --- [leaner-thread-0] kafka.log.LogCleaner$CleanerThread       : [kafka-log-cleaner-thread-0]: Starting
+2025-06-20T10:56:13.887-07:00  INFO 9281 --- [rFailureHandler] k.s.ReplicaManager$LogDirFailureHandler  : [LogDirFailureHandler]: Starting
+2025-06-20T10:56:13.888-07:00  INFO 9281 --- [nSenderThread-0] kafka.server.AddPartitionsToTxnManager   : [AddPartitionsToTxnSenderThread-0]: Starting
+2025-06-20T10:56:13.888-07:00  INFO 9281 --- [r-event-handler] k.coordinator.group.GroupCoordinator     : [GroupCoordinator 0]: Starting up.
+2025-06-20T10:56:13.888-07:00  INFO 9281 --- [r-event-handler] k.coordinator.group.GroupCoordinator     : [GroupCoordinator 0]: Startup complete.
+2025-06-20T10:56:13.889-07:00  INFO 9281 --- [r-event-handler] k.c.transaction.TransactionCoordinator   : [TransactionCoordinator id=0] Starting up.
+2025-06-20T10:56:13.889-07:00  INFO 9281 --- [rSenderThread-0] k.c.t.TransactionMarkerChannelManager    : [TxnMarkerSenderThread-0]: Starting
+2025-06-20T10:56:13.889-07:00  INFO 9281 --- [r-event-handler] k.c.transaction.TransactionCoordinator   : [TransactionCoordinator id=0] Startup complete.
+2025-06-20T10:56:13.889-07:00  INFO 9281 --- [r-event-handler] k.s.metadata.BrokerMetadataPublisher     : [BrokerMetadataPublisher id=0] Updating metadata.version to 14 at offset OffsetAndEpoch(offset=4, epoch=1).
+2025-06-20T10:56:13.917-07:00  INFO 9281 --- [channel-manager] kafka.server.BrokerLifecycleManager      : [BrokerLifecycleManager id=0] Successfully registered broker 0 with broker epoch 5
+2025-06-20T10:56:13.919-07:00  INFO 9281 --- [channel-manager] kafka.server.BrokerLifecycleManager      : [BrokerLifecycleManager id=0] The broker has caught up. Transitioning from STARTING to RECOVERY.
+2025-06-20T10:56:13.919-07:00  INFO 9281 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Finished waiting for the controller to acknowledge that we are caught up
+2025-06-20T10:56:13.919-07:00  INFO 9281 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Waiting for the initial broker metadata update to be published
+2025-06-20T10:56:13.919-07:00  INFO 9281 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Finished waiting for the initial broker metadata update to be published
+2025-06-20T10:56:13.920-07:00  INFO 9281 --- [-kit-executor-3] kafka.server.KafkaConfig                 : KafkaConfig values: 
+	advertised.listeners = null
+	alter.config.policy.class.name = null
+	alter.log.dirs.replication.quota.window.num = 11
+	alter.log.dirs.replication.quota.window.size.seconds = 1
+	authorizer.class.name = 
+	auto.create.topics.enable = true
+	auto.include.jmx.reporter = true
+	auto.leader.rebalance.enable = true
+	background.threads = 10
+	broker.heartbeat.interval.ms = 2000
+	broker.id = 0
+	broker.id.generation.enable = true
+	broker.rack = null
+	broker.session.timeout.ms = 9000
+	client.quota.callback.class = null
+	compression.type = producer
+	connection.failed.authentication.delay.ms = 100
+	connections.max.idle.ms = 600000
+	connections.max.reauth.ms = 0
+	control.plane.listener.name = null
+	controlled.shutdown.enable = true
+	controlled.shutdown.max.retries = 3
+	controlled.shutdown.retry.backoff.ms = 5000
+	controller.listener.names = CONTROLLER
+	controller.quorum.append.linger.ms = 25
+	controller.quorum.election.backoff.max.ms = 1000
+	controller.quorum.election.timeout.ms = 1000
+	controller.quorum.fetch.timeout.ms = 2000
+	controller.quorum.request.timeout.ms = 2000
+	controller.quorum.retry.backoff.ms = 20
+	controller.quorum.voters = [0@0.0.0.0:0]
+	controller.quota.window.num = 11
+	controller.quota.window.size.seconds = 1
+	controller.socket.timeout.ms = 30000
+	create.topic.policy.class.name = null
+	default.replication.factor = 1
+	delegation.token.expiry.check.interval.ms = 3600000
+	delegation.token.expiry.time.ms = 86400000
+	delegation.token.master.key = null
+	delegation.token.max.lifetime.ms = 604800000
+	delegation.token.secret.key = null
+	delete.records.purgatory.purge.interval.requests = 1
+	delete.topic.enable = true
+	early.start.listeners = null
+	fetch.max.bytes = 57671680
+	fetch.purgatory.purge.interval.requests = 1000
+	group.consumer.assignors = [org.apache.kafka.coordinator.group.assignor.RangeAssignor]
+	group.consumer.heartbeat.interval.ms = 5000
+	group.consumer.max.heartbeat.interval.ms = 15000
+	group.consumer.max.session.timeout.ms = 60000
+	group.consumer.max.size = 2147483647
+	group.consumer.min.heartbeat.interval.ms = 5000
+	group.consumer.min.session.timeout.ms = 45000
+	group.consumer.session.timeout.ms = 45000
+	group.coordinator.new.enable = false
+	group.coordinator.threads = 1
+	group.initial.rebalance.delay.ms = 0
+	group.max.session.timeout.ms = 1800000
+	group.max.size = 2147483647
+	group.min.session.timeout.ms = 6000
+	initial.broker.registration.timeout.ms = 60000
+	inter.broker.listener.name = EXTERNAL
+	inter.broker.protocol.version = 3.6-IV2
+	kafka.metrics.polling.interval.secs = 10
+	kafka.metrics.reporters = []
+	leader.imbalance.check.interval.seconds = 300
+	leader.imbalance.per.broker.percentage = 10
+	listener.security.protocol.map = EXTERNAL:PLAINTEXT,CONTROLLER:PLAINTEXT
+	listeners = EXTERNAL://localhost:0,CONTROLLER://localhost:0
+	log.cleaner.backoff.ms = 15000
+	log.cleaner.dedupe.buffer.size = 2097152
+	log.cleaner.delete.retention.ms = 86400000
+	log.cleaner.enable = true
+	log.cleaner.io.buffer.load.factor = 0.9
+	log.cleaner.io.buffer.size = 524288
+	log.cleaner.io.max.bytes.per.second = 1.7976931348623157E308
+	log.cleaner.max.compaction.lag.ms = 9223372036854775807
+	log.cleaner.min.cleanable.ratio = 0.5
+	log.cleaner.min.compaction.lag.ms = 0
+	log.cleaner.threads = 1
+	log.cleanup.policy = [delete]
+	log.dir = /tmp/kafka-logs
+	log.dirs = /var/folders/75/jtzvphp97m3c952tknqr_8th0000gn/T/kafka-1556568874203665720/broker_0_data0
+	log.flush.interval.messages = 9223372036854775807
+	log.flush.interval.ms = null
+	log.flush.offset.checkpoint.interval.ms = 60000
+	log.flush.scheduler.interval.ms = 9223372036854775807
+	log.flush.start.offset.checkpoint.interval.ms = 60000
+	log.index.interval.bytes = 4096
+	log.index.size.max.bytes = 10485760
+	log.local.retention.bytes = -2
+	log.local.retention.ms = -2
+	log.message.downconversion.enable = true
+	log.message.format.version = 3.0-IV1
+	log.message.timestamp.after.max.ms = 9223372036854775807
+	log.message.timestamp.before.max.ms = 9223372036854775807
+	log.message.timestamp.difference.max.ms = 9223372036854775807
+	log.message.timestamp.type = CreateTime
+	log.preallocate = false
+	log.retention.bytes = -1
+	log.retention.check.interval.ms = 300000
+	log.retention.hours = 168
+	log.retention.minutes = null
+	log.retention.ms = null
+	log.roll.hours = 168
+	log.roll.jitter.hours = 0
+	log.roll.jitter.ms = null
+	log.roll.ms = null
+	log.segment.bytes = 1073741824
+	log.segment.delete.delay.ms = 60000
+	max.connection.creation.rate = 2147483647
+	max.connections = 2147483647
+	max.connections.per.ip = 2147483647
+	max.connections.per.ip.overrides = 
+	max.incremental.fetch.session.cache.slots = 1000
+	message.max.bytes = 1048588
+	metadata.log.dir = /var/folders/75/jtzvphp97m3c952tknqr_8th0000gn/T/kafka-1556568874203665720/controller_0
+	metadata.log.max.record.bytes.between.snapshots = 20971520
+	metadata.log.max.snapshot.interval.ms = 3600000
+	metadata.log.segment.bytes = 1073741824
+	metadata.log.segment.min.bytes = 8388608
+	metadata.log.segment.ms = 604800000
+	metadata.max.idle.interval.ms = 500
+	metadata.max.retention.bytes = 104857600
+	metadata.max.retention.ms = 604800000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	min.insync.replicas = 1
+	node.id = 0
+	num.io.threads = 8
+	num.network.threads = 3
+	num.partitions = 1
+	num.recovery.threads.per.data.dir = 1
+	num.replica.alter.log.dirs.threads = null
+	num.replica.fetchers = 1
+	offset.metadata.max.bytes = 4096
+	offsets.commit.required.acks = -1
+	offsets.commit.timeout.ms = 5000
+	offsets.load.buffer.size = 5242880
+	offsets.retention.check.interval.ms = 600000
+	offsets.retention.minutes = 10080
+	offsets.topic.compression.codec = 0
+	offsets.topic.num.partitions = 50
+	offsets.topic.replication.factor = 1
+	offsets.topic.segment.bytes = 104857600
+	password.encoder.cipher.algorithm = AES/CBC/PKCS5Padding
+	password.encoder.iterations = 4096
+	password.encoder.key.length = 128
+	password.encoder.keyfactory.algorithm = null
+	password.encoder.old.secret = null
+	password.encoder.secret = null
+	principal.builder.class = class org.apache.kafka.common.security.authenticator.DefaultKafkaPrincipalBuilder
+	process.roles = [broker, controller]
+	producer.id.expiration.check.interval.ms = 600000
+	producer.id.expiration.ms = 86400000
+	producer.purgatory.purge.interval.requests = 1000
+	queued.max.request.bytes = -1
+	queued.max.requests = 500
+	quota.window.num = 11
+	quota.window.size.seconds = 1
+	remote.log.index.file.cache.total.size.bytes = 1073741824
+	remote.log.manager.task.interval.ms = 30000
+	remote.log.manager.task.retry.backoff.max.ms = 30000
+	remote.log.manager.task.retry.backoff.ms = 500
+	remote.log.manager.task.retry.jitter = 0.2
+	remote.log.manager.thread.pool.size = 10
+	remote.log.metadata.custom.metadata.max.bytes = 128
+	remote.log.metadata.manager.class.name = org.apache.kafka.server.log.remote.metadata.storage.TopicBasedRemoteLogMetadataManager
+	remote.log.metadata.manager.class.path = null
+	remote.log.metadata.manager.impl.prefix = rlmm.config.
+	remote.log.metadata.manager.listener.name = null
+	remote.log.reader.max.pending.tasks = 100
+	remote.log.reader.threads = 10
+	remote.log.storage.manager.class.name = null
+	remote.log.storage.manager.class.path = null
+	remote.log.storage.manager.impl.prefix = rsm.config.
+	remote.log.storage.system.enable = false
+	replica.fetch.backoff.ms = 1000
+	replica.fetch.max.bytes = 1048576
+	replica.fetch.min.bytes = 1
+	replica.fetch.response.max.bytes = 10485760
+	replica.fetch.wait.max.ms = 500
+	replica.high.watermark.checkpoint.interval.ms = 5000
+	replica.lag.time.max.ms = 30000
+	replica.selector.class = null
+	replica.socket.receive.buffer.bytes = 65536
+	replica.socket.timeout.ms = 30000
+	replication.quota.window.num = 11
+	replication.quota.window.size.seconds = 1
+	request.timeout.ms = 30000
+	reserved.broker.max.id = 1000
+	sasl.client.callback.handler.class = null
+	sasl.enabled.mechanisms = [GSSAPI]
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.principal.to.local.rules = [DEFAULT]
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism.controller.protocol = GSSAPI
+	sasl.mechanism.inter.broker.protocol = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	sasl.server.callback.handler.class = null
+	sasl.server.max.receive.size = 524288
+	security.inter.broker.protocol = PLAINTEXT
+	security.providers = null
+	server.max.startup.time.ms = 600000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	socket.listen.backlog.size = 50
+	socket.receive.buffer.bytes = 102400
+	socket.request.max.bytes = 104857600
+	socket.send.buffer.bytes = 102400
+	ssl.cipher.suites = []
+	ssl.client.auth = none
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.principal.mapping.rules = DEFAULT
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.abort.timed.out.transaction.cleanup.interval.ms = 10000
+	transaction.max.timeout.ms = 900000
+	transaction.partition.verification.enable = true
+	transaction.remove.expired.transaction.cleanup.interval.ms = 3600000
+	transaction.state.log.load.buffer.size = 5242880
+	transaction.state.log.min.isr = 2
+	transaction.state.log.num.partitions = 50
+	transaction.state.log.replication.factor = 3
+	transaction.state.log.segment.bytes = 104857600
+	transactional.id.expiration.ms = 604800000
+	unclean.leader.election.enable = false
+	unstable.api.versions.enable = false
+	zookeeper.clientCnxnSocket = null
+	zookeeper.connect = null
+	zookeeper.connection.timeout.ms = null
+	zookeeper.max.in.flight.requests = 10
+	zookeeper.metadata.migration.enable = false
+	zookeeper.metadata.migration.min.batch.size = 200
+	zookeeper.session.timeout.ms = 18000
+	zookeeper.set.acl = false
+	zookeeper.ssl.cipher.suites = null
+	zookeeper.ssl.client.enable = false
+	zookeeper.ssl.crl.enable = false
+	zookeeper.ssl.enabled.protocols = null
+	zookeeper.ssl.endpoint.identification.algorithm = HTTPS
+	zookeeper.ssl.keystore.location = null
+	zookeeper.ssl.keystore.password = null
+	zookeeper.ssl.keystore.type = null
+	zookeeper.ssl.ocsp.enable = false
+	zookeeper.ssl.protocol = TLSv1.2
+	zookeeper.ssl.truststore.location = null
+	zookeeper.ssl.truststore.password = null
+	zookeeper.ssl.truststore.type = null
+
+2025-06-20T10:56:13.922-07:00  INFO 9281 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Waiting for the broker to be unfenced
+2025-06-20T10:56:13.922-07:00  INFO 9281 --- [0-event-handler] o.a.k.controller.BrokerHeartbeatManager  : [QuorumController id=0] The request from broker 0 to unfence has been granted because it has caught up with the offset of its register broker record 5.
+2025-06-20T10:56:13.925-07:00  INFO 9281 --- [0-event-handler] o.a.k.controller.ClusterControlManager   : [QuorumController id=0] Replayed BrokerRegistrationChangeRecord modifying the registration for broker 0: BrokerRegistrationChangeRecord(brokerId=0, brokerEpoch=5, fenced=-1, inControlledShutdown=0)
+2025-06-20T10:56:13.954-07:00  INFO 9281 --- [channel-manager] kafka.server.BrokerLifecycleManager      : [BrokerLifecycleManager id=0] The broker has been unfenced. Transitioning from RECOVERY to RUNNING.
+2025-06-20T10:56:13.954-07:00  INFO 9281 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Finished waiting for the broker to be unfenced
+2025-06-20T10:56:13.955-07:00  INFO 9281 --- [-kit-executor-3] o.a.k.s.network.EndpointReadyFutures     : authorizerStart completed for endpoint EXTERNAL. Endpoint is now READY.
+2025-06-20T10:56:13.955-07:00  INFO 9281 --- [-kit-executor-3] kafka.network.SocketServer               : [SocketServer listenerType=BROKER, nodeId=0] Enabling request processing.
+2025-06-20T10:56:13.955-07:00  INFO 9281 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Waiting for all of the authorizer futures to be completed
+2025-06-20T10:56:13.955-07:00  INFO 9281 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Finished waiting for all of the authorizer futures to be completed
+2025-06-20T10:56:13.955-07:00  INFO 9281 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Waiting for all of the SocketServer Acceptors to be started
+2025-06-20T10:56:13.955-07:00  INFO 9281 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Finished waiting for all of the SocketServer Acceptors to be started
+2025-06-20T10:56:13.955-07:00  INFO 9281 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Transition from STARTING to STARTED
+2025-06-20T10:56:13.962-07:00  INFO 9281 --- [           main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:52969]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-06-20T10:56:13.972-07:00  INFO 9281 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.2
+2025-06-20T10:56:13.972-07:00  INFO 9281 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c4deed513057c94e
+2025-06-20T10:56:13.972-07:00  INFO 9281 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750442173972
+2025-06-20T10:56:13.974-07:00  INFO 9281 --- [| adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2025-06-20T10:56:13.975-07:00  INFO 9281 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-06-20T10:56:13.975-07:00  INFO 9281 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-06-20T10:56:13.975-07:00  INFO 9281 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-06-20T10:56:13.979-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : Starting TaskThreeTests using Java 22 with PID 9281 (started by blay in /Users/blay/Desktop/blay-forage-midas)
+2025-06-20T10:56:13.979-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : No active profile set, falling back to 1 default profile: "default"
+2025-06-20T10:56:14.221-07:00  INFO 9281 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-20T10:56:14.242-07:00  INFO 9281 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+2025-06-20T10:56:14.454-07:00  INFO 9281 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-20T10:56:14.483-07:00  INFO 9281 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-06-20T10:56:14.499-07:00  INFO 9281 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-20T10:56:14.597-07:00  INFO 9281 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-20T10:56:14.608-07:00  INFO 9281 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-20T10:56:14.693-07:00  INFO 9281 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-06-20T10:56:14.693-07:00  INFO 9281 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-20T10:56:14.707-07:00  WARN 9281 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-20T10:56:15.116-07:00  INFO 9281 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: drop table if exists transaction_record cascade 
+Hibernate: drop table if exists user_record cascade 
+Hibernate: drop sequence if exists user_record_seq
+Hibernate: create sequence user_record_seq start with 1 increment by 50
+Hibernate: create table transaction_record (amount float(24) not null, id bigint generated by default as identity, recipient_id bigint not null, sender_id bigint not null, primary key (id))
+Hibernate: create table user_record (balance float(24) not null, id bigint not null, name varchar(255) not null, primary key (id))
+Hibernate: alter table if exists transaction_record add constraint FKss86ywfkf0yh50h4g1sf8wc2r foreign key (recipient_id) references user_record
+Hibernate: alter table if exists transaction_record add constraint FKobsbg5y9q54y8psf0yt4mn2ac foreign key (sender_id) references user_record
+2025-06-20T10:56:15.132-07:00  INFO 9281 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-20T10:56:15.519-07:00  WARN 9281 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-20T10:56:15.619-07:00  INFO 9281 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-06-20T10:56:15.680-07:00  INFO 9281 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-midas-core-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = midas-core-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-06-20T10:56:15.704-07:00  INFO 9281 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.2
+2025-06-20T10:56:15.704-07:00  INFO 9281 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c4deed513057c94e
+2025-06-20T10:56:15.704-07:00  INFO 9281 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750442175704
+2025-06-20T10:56:15.705-07:00  INFO 9281 --- [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Subscribed to topic(s): transactions
+2025-06-20T10:56:15.713-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : Started TaskThreeTests in 2.566 seconds (process running for 2.988)
+2025-06-20T10:56:15.747-07:00  INFO 9281 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Cluster ID: DUY1rlX3TraCf3a8NC4YXg
+2025-06-20T10:56:15.747-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-20T10:56:15.748-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] (Re-)joining group
+2025-06-20T10:56:15.769-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Request joining group due to: need to re-join with the given member-id: consumer-midas-core-group-1-c113ace6-85bb-4835-9858-3b6f4d1a6f03
+2025-06-20T10:56:15.769-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2025-06-20T10:56:15.769-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] (Re-)joining group
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/Users/blay/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.13/byte-buddy-agent-1.14.13.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+Hibernate: select next value for user_record_seq
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+Hibernate: select next value for user_record_seq
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+2025-06-20T10:56:16.044-07:00  INFO 9281 --- [           main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2025-06-20T10:56:16.048-07:00  INFO 9281 --- [           main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-06-20T10:56:16.052-07:00  INFO 9281 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.2
+2025-06-20T10:56:16.052-07:00  INFO 9281 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c4deed513057c94e
+2025-06-20T10:56:16.053-07:00  INFO 9281 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750442176052
+2025-06-20T10:56:16.055-07:00  INFO 9281 --- [ad | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: DUY1rlX3TraCf3a8NC4YXg
+2025-06-20T10:56:16.056-07:00  INFO 9281 --- [ad | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 1006 with epoch 0
+2025-06-20T10:56:16.805-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Successfully joined group with generation Generation{generationId=17, memberId='consumer-midas-core-group-1-c113ace6-85bb-4835-9858-3b6f4d1a6f03', protocol='range'}
+2025-06-20T10:56:16.828-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Successfully synced group in generation Generation{generationId=17, memberId='consumer-midas-core-group-1-c113ace6-85bb-4835-9858-3b6f4d1a6f03', protocol='range'}
+2025-06-20T10:56:16.831-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Notifying assignor about the new Assignment(partitions=[transactions-0])
+2025-06-20T10:56:16.833-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Adding newly assigned partitions: transactions-0
+2025-06-20T10:56:16.841-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Setting offset for partition transactions-0 to the committed offset FetchPosition{offset=135, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2025-06-20T10:56:16.841-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : midas-core-group: partitions assigned: [transactions-0]
+2025-06-20T10:56:18.074-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ----------------------------------------------------------
+2025-06-20T10:56:18.075-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ----------------------------------------------------------
+2025-06-20T10:56:18.075-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ----------------------------------------------------------
+2025-06-20T10:56:18.075-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : use your debugger to find out what waldorf's balance is after all transactions are processed
+2025-06-20T10:56:18.075-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : kill this test once you find the answer
+2025-06-20T10:56:38.080-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T10:56:58.086-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T10:57:18.092-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T10:57:38.098-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T10:57:58.104-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T10:58:18.105-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T10:58:38.112-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T10:58:58.114-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T10:59:18.119-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T10:59:38.123-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T10:59:58.127-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:00:18.130-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:00:25.547-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #1: Transaction {senderId=6, recipientId=9, amount=173.71}
+2025-06-20T11:00:25.549-07:00  WARN 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : **DEBUG** Transaction #1: Amount = 173.71
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:00:25.572-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: whosit -> wilbur amount 173.71
+2025-06-20T11:00:25.572-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: whosit = 715.19, wilbur = 3649.92
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:00:25.576-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #2: Transaction {senderId=4, recipientId=8, amount=124.7}
+2025-06-20T11:00:25.576-07:00  WARN 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : **DEBUG** Transaction #2: Amount = 124.7
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:00:25.577-07:00  WARN 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction rejected: Insufficient balance. Sender mario has 12.34, needs 124.7
+2025-06-20T11:00:25.577-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #3: Transaction {senderId=6, recipientId=8, amount=67.38}
+2025-06-20T11:00:25.577-07:00  WARN 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : **DEBUG** Transaction #3: Amount = 67.38
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:00:25.578-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: whosit -> howsit amount 67.38
+2025-06-20T11:00:25.578-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: whosit = 647.81, howsit = 136.07999
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:00:25.579-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #4: Transaction {senderId=1, recipientId=9, amount=4.38}
+2025-06-20T11:00:25.579-07:00  WARN 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : **DEBUG** Transaction #4: Amount = 4.38
+2025-06-20T11:00:25.579-07:00  WARN 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : **DEBUG SUMMARY** First 4 transaction amounts:
+2025-06-20T11:00:25.579-07:00  WARN 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : **DEBUG** Transaction 1: Amount = 173.71
+2025-06-20T11:00:25.579-07:00  WARN 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : **DEBUG** Transaction 2: Amount = 124.7
+2025-06-20T11:00:25.579-07:00  WARN 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : **DEBUG** Transaction 3: Amount = 67.38
+2025-06-20T11:00:25.579-07:00  WARN 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : **DEBUG** Transaction 4: Amount = 4.38
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:00:25.580-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: bernie -> wilbur amount 4.38
+2025-06-20T11:00:25.581-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: bernie = 1195.85, wilbur = 3654.2998
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:00:25.581-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #5: Transaction {senderId=8, recipientId=7, amount=38.74}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:00:25.582-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: howsit -> whatsit amount 38.74
+2025-06-20T11:00:25.582-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: howsit = 97.33998, whatsit = 816.33997
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:00:25.583-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #6: Transaction {senderId=7, recipientId=2, amount=93.14}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:00:25.584-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: whatsit -> grommit amount 93.14
+2025-06-20T11:00:25.584-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: whatsit = 723.19995, grommit = 2308.51
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:00:25.584-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #7: Transaction {senderId=9, recipientId=5, amount=45.42}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:00:25.586-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: wilbur -> waldorf amount 45.42
+2025-06-20T11:00:25.586-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: wilbur = 3608.88, waldorf = 489.96997
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:00:25.586-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #8: Transaction {senderId=6, recipientId=5, amount=32.12}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:00:25.587-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: whosit -> waldorf amount 32.12
+2025-06-20T11:00:25.587-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: whosit = 615.69, waldorf = 522.08997
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:00:25.588-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #9: Transaction {senderId=7, recipientId=10, amount=98.3}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:00:25.588-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: whatsit -> antonio amount 98.3
+2025-06-20T11:00:25.589-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: whatsit = 624.89996, antonio = 2219.84
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:00:25.589-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #10: Transaction {senderId=7, recipientId=3, amount=42.58}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:00:25.590-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: whatsit -> maria amount 42.58
+2025-06-20T11:00:25.590-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: whatsit = 582.31995, maria = 2816.72
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:00:25.591-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #11: Transaction {senderId=2, recipientId=1, amount=178.24}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:00:25.592-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: grommit -> bernie amount 178.24
+2025-06-20T11:00:25.592-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: grommit = 2130.27, bernie = 1374.09
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:00:25.592-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #12: Transaction {senderId=5, recipientId=9, amount=78.74}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:00:25.594-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: waldorf -> wilbur amount 78.74
+2025-06-20T11:00:25.594-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: waldorf = 443.34998, wilbur = 3687.6199
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:00:25.594-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #13: Transaction {senderId=4, recipientId=8, amount=139.7}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:00:25.595-07:00  WARN 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction rejected: Insufficient balance. Sender mario has 12.34, needs 139.7
+2025-06-20T11:00:25.595-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #14: Transaction {senderId=9, recipientId=6, amount=57.84}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:00:25.596-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: wilbur -> whosit amount 57.84
+2025-06-20T11:00:25.596-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: wilbur = 3629.7798, whosit = 673.53
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:00:25.596-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #15: Transaction {senderId=10, recipientId=9, amount=127.4}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:00:25.597-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: antonio -> wilbur amount 127.4
+2025-06-20T11:00:25.597-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: antonio = 2092.4402, wilbur = 3757.1797
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:00:25.598-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #16: Transaction {senderId=6, recipientId=1, amount=24.37}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:00:25.599-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: whosit -> bernie amount 24.37
+2025-06-20T11:00:25.599-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: whosit = 649.16003, bernie = 1398.46
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:00:25.600-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #17: Transaction {senderId=10, recipientId=2, amount=23.86}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:00:25.601-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: antonio -> grommit amount 23.86
+2025-06-20T11:00:25.601-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: antonio = 2068.58, grommit = 2154.1301
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:00:25.602-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #18: Transaction {senderId=4, recipientId=6, amount=72.6}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:00:25.602-07:00  WARN 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction rejected: Insufficient balance. Sender mario has 12.34, needs 72.6
+2025-06-20T11:00:25.602-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #19: Transaction {senderId=3, recipientId=2, amount=127.63}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:00:25.603-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: maria -> grommit amount 127.63
+2025-06-20T11:00:25.603-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: maria = 2689.09, grommit = 2281.76
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:00:25.604-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #20: Transaction {senderId=3, recipientId=6, amount=133.7}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:00:25.604-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: maria -> whosit amount 133.7
+2025-06-20T11:00:25.604-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: maria = 2555.3901, whosit = 782.86005
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:00:25.605-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #21: Transaction {senderId=9, recipientId=5, amount=184.51}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:00:25.606-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: wilbur -> waldorf amount 184.51
+2025-06-20T11:00:25.606-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: wilbur = 3572.6697, waldorf = 627.86
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:00:25.606-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #22: Transaction {senderId=4, recipientId=5, amount=133.86}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:00:25.607-07:00  WARN 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction rejected: Insufficient balance. Sender mario has 12.34, needs 133.86
+2025-06-20T11:00:25.919-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Request joining group due to: group is already rebalancing
+2025-06-20T11:00:25.919-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Revoke previously assigned partitions transactions-0
+2025-06-20T11:00:25.920-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : midas-core-group: partitions revoked: [transactions-0]
+2025-06-20T11:00:25.920-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] (Re-)joining group
+2025-06-20T11:00:25.931-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Successfully joined group with generation Generation{generationId=18, memberId='consumer-midas-core-group-1-c113ace6-85bb-4835-9858-3b6f4d1a6f03', protocol='range'}
+2025-06-20T11:00:25.940-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Successfully synced group in generation Generation{generationId=18, memberId='consumer-midas-core-group-1-c113ace6-85bb-4835-9858-3b6f4d1a6f03', protocol='range'}
+2025-06-20T11:00:25.940-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Notifying assignor about the new Assignment(partitions=[transactions-0])
+2025-06-20T11:00:25.940-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Adding newly assigned partitions: transactions-0
+2025-06-20T11:00:25.941-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Setting offset for partition transactions-0 to the committed offset FetchPosition{offset=157, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2025-06-20T11:00:25.941-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : midas-core-group: partitions assigned: [transactions-0]
+2025-06-20T11:00:38.138-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:00:58.142-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:01:18.146-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:01:38.151-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:01:58.157-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:02:18.159-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:02:38.162-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:02:58.165-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:03:18.168-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:03:38.173-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:03:58.179-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:04:18.185-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:04:38.193-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:04:58.199-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:05:15.956-07:00  INFO 9281 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Node -1 disconnected.
+2025-06-20T11:05:16.079-07:00  INFO 9281 --- [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-20T11:05:18.207-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:05:38.212-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:05:58.216-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:06:18.221-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:06:38.228-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:06:58.235-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:07:18.242-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:07:38.247-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:07:58.254-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:08:18.262-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:08:38.270-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:08:58.273-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:09:18.280-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:09:38.282-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:09:58.288-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:10:18.293-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:10:38.295-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:10:58.297-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:11:18.301-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:11:38.303-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:11:58.308-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:12:18.312-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:12:38.317-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:12:58.322-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:13:18.328-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:13:38.333-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:13:58.336-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:14:18.341-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:14:38.347-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:14:58.348-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:15:18.355-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:15:38.366-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:15:58.372-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:16:18.380-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:16:38.388-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:16:58.395-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:17:18.406-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:17:38.412-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:17:58.418-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:18:18.424-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:18:37.287-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #23: Transaction {senderId=6, recipientId=9, amount=173.71}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:18:37.293-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: whosit -> wilbur amount 173.71
+2025-06-20T11:18:37.293-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: whosit = 609.15, wilbur = 3746.3796
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:18:37.295-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #24: Transaction {senderId=4, recipientId=8, amount=124.7}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:18:37.295-07:00  WARN 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction rejected: Insufficient balance. Sender mario has 12.34, needs 124.7
+2025-06-20T11:18:37.296-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #25: Transaction {senderId=6, recipientId=8, amount=67.38}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:18:37.296-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: whosit -> howsit amount 67.38
+2025-06-20T11:18:37.296-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: whosit = 541.77, howsit = 164.71997
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:18:37.297-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #26: Transaction {senderId=1, recipientId=9, amount=4.38}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:18:37.298-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: bernie -> wilbur amount 4.38
+2025-06-20T11:18:37.298-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: bernie = 1394.08, wilbur = 3750.7595
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:18:37.299-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #27: Transaction {senderId=8, recipientId=7, amount=38.74}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:18:37.300-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: howsit -> whatsit amount 38.74
+2025-06-20T11:18:37.300-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: howsit = 125.979965, whatsit = 621.05994
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:18:37.300-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #28: Transaction {senderId=7, recipientId=2, amount=93.14}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:18:37.301-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: whatsit -> grommit amount 93.14
+2025-06-20T11:18:37.301-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: whatsit = 527.9199, grommit = 2374.9
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:18:37.302-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #29: Transaction {senderId=9, recipientId=5, amount=45.42}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:18:37.302-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: wilbur -> waldorf amount 45.42
+2025-06-20T11:18:37.302-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: wilbur = 3705.3396, waldorf = 673.27997
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:18:37.304-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #30: Transaction {senderId=6, recipientId=5, amount=32.12}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:18:37.305-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: whosit -> waldorf amount 32.12
+2025-06-20T11:18:37.305-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: whosit = 509.65002, waldorf = 705.39996
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:18:37.306-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #31: Transaction {senderId=7, recipientId=10, amount=98.3}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:18:37.306-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: whatsit -> antonio amount 98.3
+2025-06-20T11:18:37.306-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: whatsit = 429.61993, antonio = 2166.8801
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:18:37.307-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #32: Transaction {senderId=7, recipientId=3, amount=42.58}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:18:37.308-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: whatsit -> maria amount 42.58
+2025-06-20T11:18:37.308-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: whatsit = 387.03992, maria = 2597.9702
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:18:37.308-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #33: Transaction {senderId=2, recipientId=1, amount=178.24}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:18:37.309-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: grommit -> bernie amount 178.24
+2025-06-20T11:18:37.309-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: grommit = 2196.66, bernie = 1572.32
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:18:37.309-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #34: Transaction {senderId=5, recipientId=9, amount=78.74}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:18:37.310-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: waldorf -> wilbur amount 78.74
+2025-06-20T11:18:37.310-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: waldorf = 626.66, wilbur = 3784.0796
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:18:37.311-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #35: Transaction {senderId=4, recipientId=8, amount=139.7}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:18:37.312-07:00  WARN 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction rejected: Insufficient balance. Sender mario has 12.34, needs 139.7
+2025-06-20T11:18:37.312-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #36: Transaction {senderId=9, recipientId=6, amount=57.84}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:18:37.313-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: wilbur -> whosit amount 57.84
+2025-06-20T11:18:37.313-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: wilbur = 3726.2395, whosit = 567.49005
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:18:37.313-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #37: Transaction {senderId=10, recipientId=9, amount=127.4}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:18:37.314-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: antonio -> wilbur amount 127.4
+2025-06-20T11:18:37.314-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: antonio = 2039.4801, wilbur = 3853.6394
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:18:37.314-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #38: Transaction {senderId=6, recipientId=1, amount=24.37}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:18:37.315-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: whosit -> bernie amount 24.37
+2025-06-20T11:18:37.315-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: whosit = 543.12006, bernie = 1596.69
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:18:37.315-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #39: Transaction {senderId=10, recipientId=2, amount=23.86}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:18:37.316-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: antonio -> grommit amount 23.86
+2025-06-20T11:18:37.316-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: antonio = 2015.6201, grommit = 2220.52
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:18:37.317-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #40: Transaction {senderId=4, recipientId=6, amount=72.6}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:18:37.317-07:00  WARN 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction rejected: Insufficient balance. Sender mario has 12.34, needs 72.6
+2025-06-20T11:18:37.317-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #41: Transaction {senderId=3, recipientId=2, amount=127.63}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:18:37.318-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: maria -> grommit amount 127.63
+2025-06-20T11:18:37.318-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: maria = 2470.3403, grommit = 2348.15
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:18:37.318-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #42: Transaction {senderId=3, recipientId=6, amount=133.7}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:18:37.319-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: maria -> whosit amount 133.7
+2025-06-20T11:18:37.319-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: maria = 2336.6404, whosit = 676.82007
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:18:37.320-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #43: Transaction {senderId=9, recipientId=5, amount=184.51}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: insert into transaction_record (amount,recipient_id,sender_id,id) values (?,?,?,default)
+2025-06-20T11:18:37.322-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: wilbur -> waldorf amount 184.51
+2025-06-20T11:18:37.322-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances: wilbur = 3669.1294, waldorf = 811.17
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+2025-06-20T11:18:37.323-07:00  INFO 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #44: Transaction {senderId=4, recipientId=5, amount=133.86}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:18:37.323-07:00  WARN 9281 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction rejected: Insufficient balance. Sender mario has 12.34, needs 133.86
+2025-06-20T11:18:38.389-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Request joining group due to: group is already rebalancing
+2025-06-20T11:18:38.389-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Revoke previously assigned partitions transactions-0
+2025-06-20T11:18:38.390-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : midas-core-group: partitions revoked: [transactions-0]
+2025-06-20T11:18:38.390-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] (Re-)joining group
+2025-06-20T11:18:38.422-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Successfully joined group with generation Generation{generationId=19, memberId='consumer-midas-core-group-1-c113ace6-85bb-4835-9858-3b6f4d1a6f03', protocol='range'}
+2025-06-20T11:18:38.431-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:18:38.446-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Successfully synced group in generation Generation{generationId=19, memberId='consumer-midas-core-group-1-c113ace6-85bb-4835-9858-3b6f4d1a6f03', protocol='range'}
+2025-06-20T11:18:38.446-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Notifying assignor about the new Assignment(partitions=[transactions-0])
+2025-06-20T11:18:38.446-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Adding newly assigned partitions: transactions-0
+2025-06-20T11:18:38.448-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Setting offset for partition transactions-0 to the committed offset FetchPosition{offset=179, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2025-06-20T11:18:38.448-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : midas-core-group: partitions assigned: [transactions-0]
+2025-06-20T11:18:44.425-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Request joining group due to: group is already rebalancing
+2025-06-20T11:18:44.425-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Revoke previously assigned partitions transactions-0
+2025-06-20T11:18:44.425-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : midas-core-group: partitions revoked: [transactions-0]
+2025-06-20T11:18:44.425-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] (Re-)joining group
+2025-06-20T11:18:44.427-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Successfully joined group with generation Generation{generationId=20, memberId='consumer-midas-core-group-1-c113ace6-85bb-4835-9858-3b6f4d1a6f03', protocol='range'}
+2025-06-20T11:18:44.453-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Successfully synced group in generation Generation{generationId=20, memberId='consumer-midas-core-group-1-c113ace6-85bb-4835-9858-3b6f4d1a6f03', protocol='range'}
+2025-06-20T11:18:44.454-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Notifying assignor about the new Assignment(partitions=[transactions-0])
+2025-06-20T11:18:44.454-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Adding newly assigned partitions: transactions-0
+2025-06-20T11:18:44.454-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Setting offset for partition transactions-0 to the committed offset FetchPosition{offset=179, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2025-06-20T11:18:44.454-07:00  INFO 9281 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : midas-core-group: partitions assigned: [transactions-0]
+2025-06-20T11:18:58.437-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:19:18.447-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
+2025-06-20T11:19:38.455-07:00  INFO 9281 --- [           main] com.jpmc.midascore.TaskThreeTests        : ...
