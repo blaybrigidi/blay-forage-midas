@@ -1,0 +1,1040 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.jpmc:midas-core >-------------------------
+[INFO] Building midas-core 1.0.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ midas-core ---
+[INFO] skip non existing resourceDirectory /Users/blay/Desktop/blay-forage-midas/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/blay/Desktop/blay-forage-midas/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ midas-core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ midas-core ---
+[INFO] Copying 5 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.11.0:testCompile (default-testCompile) @ midas-core ---
+[INFO] Changes detected - recompiling the module! :input tree
+[INFO] Compiling 10 source files with javac [debug release 17] to target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.1.2:test (default-test) @ midas-core ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.jpmc.midascore.TaskFourTests
+11:40:18.359 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.jpmc.midascore.TaskFourTests]: TaskFourTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:40:18.403 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.jpmc.midascore.MidasCoreApplication for test class com.jpmc.midascore.TaskFourTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2025-06-20T11:40:18.819-07:00  INFO 12956 --- [           main] k.utils.Log4jControllerRegistration$     : Registered kafka:type=kafka.Log4jController MBean
+2025-06-20T11:40:18.834-07:00  INFO 12956 --- [           main] org.apache.zookeeper.common.X509Util     : Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2025-06-20T11:40:18.892-07:00  INFO 12956 --- [-kit-executor-1] kafka.server.ControllerServer            : Formatting /var/folders/75/jtzvphp97m3c952tknqr_8th0000gn/T/kafka-15855154683006439918/controller_0 with metadata.version 3.3-IV0.
+2025-06-20T11:40:18.893-07:00  INFO 12956 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Transition from SHUTDOWN to STARTING
+2025-06-20T11:40:18.893-07:00  INFO 12956 --- [-kit-executor-2] kafka.server.ControllerServer            : [ControllerServer id=0] Starting controller
+2025-06-20T11:40:18.893-07:00  INFO 12956 --- [-kit-executor-3] kafka.server.SharedServer                : [SharedServer id=0] Starting SharedServer
+2025-06-20T11:40:18.902-07:00  INFO 12956 --- [-kit-executor-2] o.a.k.s.network.EndpointReadyFutures     : authorizerStart completed for endpoint CONTROLLER. Endpoint is now READY.
+2025-06-20T11:40:18.946-07:00  INFO 12956 --- [-kit-executor-3] kafka.log.UnifiedLog$                    : [LogLoader partition=__cluster_metadata-0, dir=/var/folders/75/jtzvphp97m3c952tknqr_8th0000gn/T/kafka-15855154683006439918/controller_0] Loading producer state till offset 0 with message format version 2
+2025-06-20T11:40:18.946-07:00  INFO 12956 --- [-kit-executor-3] kafka.log.UnifiedLog$                    : [LogLoader partition=__cluster_metadata-0, dir=/var/folders/75/jtzvphp97m3c952tknqr_8th0000gn/T/kafka-15855154683006439918/controller_0] Reloading from producer snapshot and rebuilding producer state from offset 0
+2025-06-20T11:40:18.946-07:00  INFO 12956 --- [-kit-executor-3] kafka.log.UnifiedLog$                    : [LogLoader partition=__cluster_metadata-0, dir=/var/folders/75/jtzvphp97m3c952tknqr_8th0000gn/T/kafka-15855154683006439918/controller_0] Producer state recovery took 0ms for snapshot load and 0ms for segment recovery from offset 0
+2025-06-20T11:40:18.967-07:00  INFO 12956 --- [-kit-executor-3] kafka.raft.KafkaMetadataLog$             : Initialized snapshots with IDs SortedSet() from /var/folders/75/jtzvphp97m3c952tknqr_8th0000gn/T/kafka-15855154683006439918/controller_0/__cluster_metadata-0
+2025-06-20T11:40:18.987-07:00  INFO 12956 --- [piration-reaper] ExpirationService$ExpiredOperationReaper : [raft-expiration-reaper]: Starting
+2025-06-20T11:40:19.005-07:00  INFO 12956 --- [-kit-executor-3] org.apache.kafka.raft.QuorumState        : [RaftManager id=0] Completed transition to Unattached(epoch=0, voters=[0], electionTimeoutMs=1727) from null
+2025-06-20T11:40:19.010-07:00  INFO 12956 --- [-kit-executor-3] org.apache.kafka.raft.QuorumState        : [RaftManager id=0] Completed transition to CandidateState(localId=0, epoch=1, retries=1, voteStates={0=GRANTED}, highWatermark=Optional.empty, electionTimeoutMs=1736) from Unattached(epoch=0, voters=[0], electionTimeoutMs=1727)
+2025-06-20T11:40:19.014-07:00  INFO 12956 --- [-kit-executor-3] org.apache.kafka.raft.QuorumState        : [RaftManager id=0] Completed transition to Leader(localId=0, epoch=1, epochStartOffset=0, highWatermark=Optional.empty, voterStates={0=ReplicaState(nodeId=0, endOffset=Optional.empty, lastFetchTimestamp=-1, lastCaughtUpTimestamp=-1, hasAcknowledgedLeader=true)}) from CandidateState(localId=0, epoch=1, retries=1, voteStates={0=GRANTED}, highWatermark=Optional.empty, electionTimeoutMs=1736)
+2025-06-20T11:40:19.053-07:00  INFO 12956 --- [-kit-executor-2] kafka.network.ConnectionQuotas           : Updated connection-accept-rate max connection creation rate to 2147483647
+2025-06-20T11:40:19.064-07:00  INFO 12956 --- [-kit-executor-2] kafka.network.DataPlaneAcceptor          : Awaiting socket connections on localhost:54208.
+2025-06-20T11:40:19.064-07:00  INFO 12956 --- [-kit-executor-2] kafka.network.DataPlaneAcceptor          : Opened wildcard endpoint localhost:54208
+2025-06-20T11:40:19.071-07:00  INFO 12956 --- [-kit-executor-2] kafka.network.SocketServer               : [SocketServer listenerType=CONTROLLER, nodeId=0] Created data-plane acceptor and processors for endpoint : ListenerName(CONTROLLER)
+2025-06-20T11:40:19.073-07:00  INFO 12956 --- [-request-thread] kafka.raft.RaftSendThread                : [kafka-0-raft-outbound-request-thread]: Starting
+2025-06-20T11:40:19.073-07:00  INFO 12956 --- [-raft-io-thread] k.raft.KafkaRaftManager$RaftIoThread     : [kafka-0-raft-io-thread]: Starting
+2025-06-20T11:40:19.079-07:00  INFO 12956 --- [-raft-io-thread] org.apache.kafka.raft.LeaderState        : [RaftManager id=0] High watermark set to LogOffsetMetadata(offset=1, metadata=Optional[(segmentBaseOffset=0,relativePositionInSegment=91)]) for the first time for epoch 1 based on indexOfHw 0 and voters [ReplicaState(nodeId=0, endOffset=Optional[LogOffsetMetadata(offset=1, metadata=Optional[(segmentBaseOffset=0,relativePositionInSegment=91)])], lastFetchTimestamp=-1, lastCaughtUpTimestamp=-1, hasAcknowledgedLeader=true)]
+2025-06-20T11:40:19.083-07:00  INFO 12956 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] initializeNewPublishers: The loader is still catching up because we have loaded up to offset -1, but the high water mark is 1
+2025-06-20T11:40:19.084-07:00  INFO 12956 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Starting broker
+2025-06-20T11:40:19.084-07:00  INFO 12956 --- [-kit-executor-2] kafka.server.ControllerServer            : [ControllerServer id=0] Waiting for controller quorum voters future
+2025-06-20T11:40:19.084-07:00  INFO 12956 --- [-kit-executor-2] kafka.server.ControllerServer            : [ControllerServer id=0] Finished waiting for controller quorum voters future
+2025-06-20T11:40:19.086-07:00  INFO 12956 --- [-raft-io-thread] org.apache.kafka.raft.KafkaRaftClient    : [RaftManager id=0] Registered the listener org.apache.kafka.image.loader.MetadataLoader@1584774639
+2025-06-20T11:40:19.090-07:00  INFO 12956 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] maybePublishMetadata(LOG_DELTA): The loader is still catching up because we have not loaded a controller record as of offset 0 and high water mark is 1
+2025-06-20T11:40:19.091-07:00  INFO 12956 --- [nelReaper-Fetch] lientQuotaManager$ThrottledChannelReaper : [broker-0-ThrottledChannelReaper-Fetch]: Starting
+2025-06-20T11:40:19.091-07:00  INFO 12956 --- [lReaper-Produce] lientQuotaManager$ThrottledChannelReaper : [broker-0-ThrottledChannelReaper-Produce]: Starting
+2025-06-20T11:40:19.092-07:00  INFO 12956 --- [lReaper-Request] lientQuotaManager$ThrottledChannelReaper : [broker-0-ThrottledChannelReaper-Request]: Starting
+2025-06-20T11:40:19.092-07:00  INFO 12956 --- [trollerMutation] lientQuotaManager$ThrottledChannelReaper : [broker-0-ThrottledChannelReaper-ControllerMutation]: Starting
+2025-06-20T11:40:19.098-07:00  INFO 12956 --- [-kit-executor-2] o.a.kafka.controller.QuorumController    : [QuorumController id=0] Creating new QuorumController with clusterId EGIVu2STT1qtXl2CDrUcJg.
+2025-06-20T11:40:19.098-07:00  INFO 12956 --- [-raft-io-thread] org.apache.kafka.raft.KafkaRaftClient    : [RaftManager id=0] Registered the listener org.apache.kafka.controller.QuorumController$QuorumMetaLogListener@2039068227
+2025-06-20T11:40:19.098-07:00  INFO 12956 --- [nelReaper-Fetch] lientQuotaManager$ThrottledChannelReaper : [controller-0-ThrottledChannelReaper-Fetch]: Starting
+2025-06-20T11:40:19.099-07:00  INFO 12956 --- [lReaper-Produce] lientQuotaManager$ThrottledChannelReaper : [controller-0-ThrottledChannelReaper-Produce]: Starting
+2025-06-20T11:40:19.099-07:00  INFO 12956 --- [lReaper-Request] lientQuotaManager$ThrottledChannelReaper : [controller-0-ThrottledChannelReaper-Request]: Starting
+2025-06-20T11:40:19.099-07:00  INFO 12956 --- [trollerMutation] lientQuotaManager$ThrottledChannelReaper : [controller-0-ThrottledChannelReaper-ControllerMutation]: Starting
+2025-06-20T11:40:19.099-07:00  INFO 12956 --- [0-event-handler] o.a.kafka.controller.QuorumController    : [QuorumController id=0] Becoming the active controller at epoch 1, next write offset 1.
+2025-06-20T11:40:19.100-07:00  INFO 12956 --- [-kit-executor-3] kafka.log.LogManager                     : Log directory /var/folders/75/jtzvphp97m3c952tknqr_8th0000gn/T/kafka-15855154683006439918/broker_0_data0 not found, creating it.
+2025-06-20T11:40:19.102-07:00  WARN 12956 --- [0-event-handler] o.a.kafka.controller.QuorumController    : [QuorumController id=0] Performing controller activation. The metadata log appears to be empty. Appending 1 bootstrap record(s) in metadata transaction at metadata.version 3.6-IV2 from bootstrap source 'testkit'. Setting the ZK migration state to NONE since this is a de-novo KRaft cluster.
+2025-06-20T11:40:19.102-07:00  INFO 12956 --- [0-event-handler] o.a.k.controller.OffsetControlManager    : [QuorumController id=0] Replayed BeginTransactionRecord(name='Bootstrap records') at offset 1.
+2025-06-20T11:40:19.104-07:00  INFO 12956 --- [0-event-handler] o.a.k.controller.FeatureControlManager   : [QuorumController id=0] Replayed a FeatureLevelRecord setting metadata version to 3.6-IV2
+2025-06-20T11:40:19.104-07:00  INFO 12956 --- [0-event-handler] o.a.k.controller.OffsetControlManager    : [QuorumController id=0] Replayed EndTransactionRecord() at offset 4.
+2025-06-20T11:40:19.106-07:00  INFO 12956 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Waiting for controller quorum voters future
+2025-06-20T11:40:19.106-07:00  INFO 12956 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Finished waiting for controller quorum voters future
+2025-06-20T11:40:19.107-07:00  INFO 12956 --- [per-0-AlterAcls] perationPurgatory$ExpiredOperationReaper : [ExpirationReaper-0-AlterAcls]: Starting
+2025-06-20T11:40:19.108-07:00  INFO 12956 --- [channel-manager] k.s.BrokerToControllerRequestThread      : [broker-0-to-controller-forwarding-channel-manager]: Starting
+2025-06-20T11:40:19.109-07:00  INFO 12956 --- [channel-manager] k.s.BrokerToControllerRequestThread      : [broker-0-to-controller-forwarding-channel-manager]: Recorded new controller, from now on will use node localhost:54208 (id: 0 rack: null)
+2025-06-20T11:40:19.112-07:00  INFO 12956 --- [-kit-executor-2] kafka.server.ControllerServer            : [ControllerServer id=0] Waiting for the controller metadata publishers to be installed
+2025-06-20T11:40:19.112-07:00  INFO 12956 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] initializeNewPublishers: The loader finished catching up to the current high water mark of 1
+2025-06-20T11:40:19.112-07:00  INFO 12956 --- [-kit-executor-2] kafka.server.ControllerServer            : [ControllerServer id=0] Finished waiting for the controller metadata publishers to be installed
+2025-06-20T11:40:19.112-07:00  INFO 12956 --- [-kit-executor-2] kafka.network.SocketServer               : [SocketServer listenerType=CONTROLLER, nodeId=0] Enabling request processing.
+2025-06-20T11:40:19.115-07:00  INFO 12956 --- [-kit-executor-2] kafka.server.ControllerServer            : [ControllerServer id=0] Waiting for all of the authorizer futures to be completed
+2025-06-20T11:40:19.115-07:00  INFO 12956 --- [-kit-executor-2] kafka.server.ControllerServer            : [ControllerServer id=0] Finished waiting for all of the authorizer futures to be completed
+2025-06-20T11:40:19.115-07:00  INFO 12956 --- [-kit-executor-2] kafka.server.ControllerServer            : [ControllerServer id=0] Waiting for all of the SocketServer Acceptors to be started
+2025-06-20T11:40:19.115-07:00  INFO 12956 --- [-kit-executor-2] kafka.server.ControllerServer            : [ControllerServer id=0] Finished waiting for all of the SocketServer Acceptors to be started
+2025-06-20T11:40:19.115-07:00  INFO 12956 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] InitializeNewPublishers: initializing SnapshotGenerator with a snapshot at offset 0
+2025-06-20T11:40:19.116-07:00  INFO 12956 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] InitializeNewPublishers: initializing FeaturesPublisher with a snapshot at offset 0
+2025-06-20T11:40:19.116-07:00  INFO 12956 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] InitializeNewPublishers: initializing DynamicConfigPublisher controller id=0 with a snapshot at offset 0
+2025-06-20T11:40:19.116-07:00  INFO 12956 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] InitializeNewPublishers: initializing DynamicClientQuotaPublisher controller id=0 with a snapshot at offset 0
+2025-06-20T11:40:19.117-07:00  INFO 12956 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] InitializeNewPublishers: initializing ScramPublisher controller id=0 with a snapshot at offset 0
+2025-06-20T11:40:19.117-07:00  INFO 12956 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] InitializeNewPublishers: initializing DelegationTokenPublisher controller id=0 with a snapshot at offset 0
+2025-06-20T11:40:19.117-07:00  INFO 12956 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] InitializeNewPublishers: initializing ControllerMetadataMetricsPublisher with a snapshot at offset 0
+2025-06-20T11:40:19.118-07:00  INFO 12956 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] InitializeNewPublishers: initializing AclPublisher controller id=0 with a snapshot at offset 0
+2025-06-20T11:40:19.120-07:00  INFO 12956 --- [-kit-executor-3] kafka.network.ConnectionQuotas           : Updated connection-accept-rate max connection creation rate to 2147483647
+2025-06-20T11:40:19.120-07:00  INFO 12956 --- [-kit-executor-3] kafka.network.DataPlaneAcceptor          : Awaiting socket connections on localhost:54209.
+2025-06-20T11:40:19.120-07:00  INFO 12956 --- [-kit-executor-3] kafka.network.DataPlaneAcceptor          : Opened wildcard endpoint localhost:54209
+2025-06-20T11:40:19.122-07:00  INFO 12956 --- [-kit-executor-3] kafka.network.SocketServer               : [SocketServer listenerType=BROKER, nodeId=0] Created data-plane acceptor and processors for endpoint : ListenerName(EXTERNAL)
+2025-06-20T11:40:19.123-07:00  INFO 12956 --- [channel-manager] k.s.BrokerToControllerRequestThread      : [broker-0-to-controller-alter-partition-channel-manager]: Starting
+2025-06-20T11:40:19.123-07:00  INFO 12956 --- [channel-manager] k.s.BrokerToControllerRequestThread      : [broker-0-to-controller-alter-partition-channel-manager]: Recorded new controller, from now on will use node localhost:54208 (id: 0 rack: null)
+2025-06-20T11:40:19.132-07:00  INFO 12956 --- [eaper-0-Produce] perationPurgatory$ExpiredOperationReaper : [ExpirationReaper-0-Produce]: Starting
+2025-06-20T11:40:19.132-07:00  INFO 12956 --- [nReaper-0-Fetch] perationPurgatory$ExpiredOperationReaper : [ExpirationReaper-0-Fetch]: Starting
+2025-06-20T11:40:19.135-07:00  INFO 12956 --- [0-DeleteRecords] perationPurgatory$ExpiredOperationReaper : [ExpirationReaper-0-DeleteRecords]: Starting
+2025-06-20T11:40:19.135-07:00  INFO 12956 --- [r-0-ElectLeader] perationPurgatory$ExpiredOperationReaper : [ExpirationReaper-0-ElectLeader]: Starting
+2025-06-20T11:40:19.135-07:00  INFO 12956 --- [r-0-RemoteFetch] perationPurgatory$ExpiredOperationReaper : [ExpirationReaper-0-RemoteFetch]: Starting
+2025-06-20T11:40:19.143-07:00  INFO 12956 --- [per-0-Heartbeat] perationPurgatory$ExpiredOperationReaper : [ExpirationReaper-0-Heartbeat]: Starting
+2025-06-20T11:40:19.143-07:00  INFO 12956 --- [per-0-Rebalance] perationPurgatory$ExpiredOperationReaper : [ExpirationReaper-0-Rebalance]: Starting
+2025-06-20T11:40:19.156-07:00  INFO 12956 --- [channel-manager] k.s.BrokerToControllerRequestThread      : [broker-0-to-controller-heartbeat-channel-manager]: Starting
+2025-06-20T11:40:19.156-07:00  INFO 12956 --- [channel-manager] k.s.BrokerToControllerRequestThread      : [broker-0-to-controller-heartbeat-channel-manager]: Recorded new controller, from now on will use node localhost:54208 (id: 0 rack: null)
+2025-06-20T11:40:19.157-07:00  INFO 12956 --- [r-event-handler] kafka.server.BrokerLifecycleManager      : [BrokerLifecycleManager id=0] Incarnation dzGlSXzNTB2ilorTuVEV6w of broker 0 in cluster EGIVu2STT1qtXl2CDrUcJg is now STARTING.
+2025-06-20T11:40:19.165-07:00  INFO 12956 --- [per-0-AlterAcls] perationPurgatory$ExpiredOperationReaper : [ExpirationReaper-0-AlterAcls]: Starting
+2025-06-20T11:40:19.174-07:00  INFO 12956 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Waiting for the broker metadata publishers to be installed
+2025-06-20T11:40:19.174-07:00  INFO 12956 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Finished waiting for the broker metadata publishers to be installed
+2025-06-20T11:40:19.174-07:00  INFO 12956 --- [r-event-handler] o.a.kafka.image.loader.MetadataLoader    : [MetadataLoader id=0] InitializeNewPublishers: initializing BrokerMetadataPublisher with a snapshot at offset 4
+2025-06-20T11:40:19.174-07:00  INFO 12956 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Waiting for the controller to acknowledge that we are caught up
+2025-06-20T11:40:19.175-07:00  INFO 12956 --- [r-event-handler] k.s.metadata.BrokerMetadataPublisher     : [BrokerMetadataPublisher id=0] Publishing initial metadata at offset OffsetAndEpoch(offset=4, epoch=1) with metadata.version 3.6-IV2.
+2025-06-20T11:40:19.175-07:00  INFO 12956 --- [r-event-handler] kafka.log.LogManager                     : Loading logs from log dirs ArraySeq(/var/folders/75/jtzvphp97m3c952tknqr_8th0000gn/T/kafka-15855154683006439918/broker_0_data0)
+2025-06-20T11:40:19.177-07:00  INFO 12956 --- [r-event-handler] kafka.log.LogManager                     : No logs found to be loaded in /var/folders/75/jtzvphp97m3c952tknqr_8th0000gn/T/kafka-15855154683006439918/broker_0_data0
+2025-06-20T11:40:19.179-07:00  INFO 12956 --- [r-event-handler] kafka.log.LogManager                     : Loaded 0 logs in 3ms
+2025-06-20T11:40:19.179-07:00  INFO 12956 --- [r-event-handler] kafka.log.LogManager                     : Starting log cleanup with a period of 300000 ms.
+2025-06-20T11:40:19.179-07:00  INFO 12956 --- [r-event-handler] kafka.log.LogManager                     : Starting log flusher with a default period of 9223372036854775807 ms.
+2025-06-20T11:40:19.185-07:00  INFO 12956 --- [0-event-handler] o.a.k.controller.ClusterControlManager   : [QuorumController id=0] Replayed initial RegisterBrokerRecord for broker 0: RegisterBrokerRecord(brokerId=0, isMigratingZkBroker=false, incarnationId=dzGlSXzNTB2ilorTuVEV6w, brokerEpoch=5, endPoints=[BrokerEndpoint(name='EXTERNAL', host='localhost', port=54209, securityProtocol=0)], features=[BrokerFeature(name='metadata.version', minSupportedVersion=1, maxSupportedVersion=14)], rack=null, fenced=true, inControlledShutdown=false)
+2025-06-20T11:40:19.185-07:00  INFO 12956 --- [r-event-handler] kafka.log.LogCleaner                     : Starting the log cleaner
+2025-06-20T11:40:19.187-07:00  INFO 12956 --- [leaner-thread-0] kafka.log.LogCleaner$CleanerThread       : [kafka-log-cleaner-thread-0]: Starting
+2025-06-20T11:40:19.188-07:00  INFO 12956 --- [rFailureHandler] k.s.ReplicaManager$LogDirFailureHandler  : [LogDirFailureHandler]: Starting
+2025-06-20T11:40:19.188-07:00  INFO 12956 --- [nSenderThread-0] kafka.server.AddPartitionsToTxnManager   : [AddPartitionsToTxnSenderThread-0]: Starting
+2025-06-20T11:40:19.189-07:00  INFO 12956 --- [r-event-handler] k.coordinator.group.GroupCoordinator     : [GroupCoordinator 0]: Starting up.
+2025-06-20T11:40:19.190-07:00  INFO 12956 --- [r-event-handler] k.coordinator.group.GroupCoordinator     : [GroupCoordinator 0]: Startup complete.
+2025-06-20T11:40:19.190-07:00  INFO 12956 --- [r-event-handler] k.c.transaction.TransactionCoordinator   : [TransactionCoordinator id=0] Starting up.
+2025-06-20T11:40:19.190-07:00  INFO 12956 --- [r-event-handler] k.c.transaction.TransactionCoordinator   : [TransactionCoordinator id=0] Startup complete.
+2025-06-20T11:40:19.190-07:00  INFO 12956 --- [rSenderThread-0] k.c.t.TransactionMarkerChannelManager    : [TxnMarkerSenderThread-0]: Starting
+2025-06-20T11:40:19.190-07:00  INFO 12956 --- [r-event-handler] k.s.metadata.BrokerMetadataPublisher     : [BrokerMetadataPublisher id=0] Updating metadata.version to 14 at offset OffsetAndEpoch(offset=4, epoch=1).
+2025-06-20T11:40:19.217-07:00  INFO 12956 --- [channel-manager] kafka.server.BrokerLifecycleManager      : [BrokerLifecycleManager id=0] Successfully registered broker 0 with broker epoch 5
+2025-06-20T11:40:19.219-07:00  INFO 12956 --- [channel-manager] kafka.server.BrokerLifecycleManager      : [BrokerLifecycleManager id=0] The broker has caught up. Transitioning from STARTING to RECOVERY.
+2025-06-20T11:40:19.219-07:00  INFO 12956 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Finished waiting for the controller to acknowledge that we are caught up
+2025-06-20T11:40:19.219-07:00  INFO 12956 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Waiting for the initial broker metadata update to be published
+2025-06-20T11:40:19.219-07:00  INFO 12956 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Finished waiting for the initial broker metadata update to be published
+2025-06-20T11:40:19.220-07:00  INFO 12956 --- [-kit-executor-3] kafka.server.KafkaConfig                 : KafkaConfig values: 
+	advertised.listeners = null
+	alter.config.policy.class.name = null
+	alter.log.dirs.replication.quota.window.num = 11
+	alter.log.dirs.replication.quota.window.size.seconds = 1
+	authorizer.class.name = 
+	auto.create.topics.enable = true
+	auto.include.jmx.reporter = true
+	auto.leader.rebalance.enable = true
+	background.threads = 10
+	broker.heartbeat.interval.ms = 2000
+	broker.id = 0
+	broker.id.generation.enable = true
+	broker.rack = null
+	broker.session.timeout.ms = 9000
+	client.quota.callback.class = null
+	compression.type = producer
+	connection.failed.authentication.delay.ms = 100
+	connections.max.idle.ms = 600000
+	connections.max.reauth.ms = 0
+	control.plane.listener.name = null
+	controlled.shutdown.enable = true
+	controlled.shutdown.max.retries = 3
+	controlled.shutdown.retry.backoff.ms = 5000
+	controller.listener.names = CONTROLLER
+	controller.quorum.append.linger.ms = 25
+	controller.quorum.election.backoff.max.ms = 1000
+	controller.quorum.election.timeout.ms = 1000
+	controller.quorum.fetch.timeout.ms = 2000
+	controller.quorum.request.timeout.ms = 2000
+	controller.quorum.retry.backoff.ms = 20
+	controller.quorum.voters = [0@0.0.0.0:0]
+	controller.quota.window.num = 11
+	controller.quota.window.size.seconds = 1
+	controller.socket.timeout.ms = 30000
+	create.topic.policy.class.name = null
+	default.replication.factor = 1
+	delegation.token.expiry.check.interval.ms = 3600000
+	delegation.token.expiry.time.ms = 86400000
+	delegation.token.master.key = null
+	delegation.token.max.lifetime.ms = 604800000
+	delegation.token.secret.key = null
+	delete.records.purgatory.purge.interval.requests = 1
+	delete.topic.enable = true
+	early.start.listeners = null
+	fetch.max.bytes = 57671680
+	fetch.purgatory.purge.interval.requests = 1000
+	group.consumer.assignors = [org.apache.kafka.coordinator.group.assignor.RangeAssignor]
+	group.consumer.heartbeat.interval.ms = 5000
+	group.consumer.max.heartbeat.interval.ms = 15000
+	group.consumer.max.session.timeout.ms = 60000
+	group.consumer.max.size = 2147483647
+	group.consumer.min.heartbeat.interval.ms = 5000
+	group.consumer.min.session.timeout.ms = 45000
+	group.consumer.session.timeout.ms = 45000
+	group.coordinator.new.enable = false
+	group.coordinator.threads = 1
+	group.initial.rebalance.delay.ms = 0
+	group.max.session.timeout.ms = 1800000
+	group.max.size = 2147483647
+	group.min.session.timeout.ms = 6000
+	initial.broker.registration.timeout.ms = 60000
+	inter.broker.listener.name = EXTERNAL
+	inter.broker.protocol.version = 3.6-IV2
+	kafka.metrics.polling.interval.secs = 10
+	kafka.metrics.reporters = []
+	leader.imbalance.check.interval.seconds = 300
+	leader.imbalance.per.broker.percentage = 10
+	listener.security.protocol.map = EXTERNAL:PLAINTEXT,CONTROLLER:PLAINTEXT
+	listeners = EXTERNAL://localhost:0,CONTROLLER://localhost:0
+	log.cleaner.backoff.ms = 15000
+	log.cleaner.dedupe.buffer.size = 2097152
+	log.cleaner.delete.retention.ms = 86400000
+	log.cleaner.enable = true
+	log.cleaner.io.buffer.load.factor = 0.9
+	log.cleaner.io.buffer.size = 524288
+	log.cleaner.io.max.bytes.per.second = 1.7976931348623157E308
+	log.cleaner.max.compaction.lag.ms = 9223372036854775807
+	log.cleaner.min.cleanable.ratio = 0.5
+	log.cleaner.min.compaction.lag.ms = 0
+	log.cleaner.threads = 1
+	log.cleanup.policy = [delete]
+	log.dir = /tmp/kafka-logs
+	log.dirs = /var/folders/75/jtzvphp97m3c952tknqr_8th0000gn/T/kafka-15855154683006439918/broker_0_data0
+	log.flush.interval.messages = 9223372036854775807
+	log.flush.interval.ms = null
+	log.flush.offset.checkpoint.interval.ms = 60000
+	log.flush.scheduler.interval.ms = 9223372036854775807
+	log.flush.start.offset.checkpoint.interval.ms = 60000
+	log.index.interval.bytes = 4096
+	log.index.size.max.bytes = 10485760
+	log.local.retention.bytes = -2
+	log.local.retention.ms = -2
+	log.message.downconversion.enable = true
+	log.message.format.version = 3.0-IV1
+	log.message.timestamp.after.max.ms = 9223372036854775807
+	log.message.timestamp.before.max.ms = 9223372036854775807
+	log.message.timestamp.difference.max.ms = 9223372036854775807
+	log.message.timestamp.type = CreateTime
+	log.preallocate = false
+	log.retention.bytes = -1
+	log.retention.check.interval.ms = 300000
+	log.retention.hours = 168
+	log.retention.minutes = null
+	log.retention.ms = null
+	log.roll.hours = 168
+	log.roll.jitter.hours = 0
+	log.roll.jitter.ms = null
+	log.roll.ms = null
+	log.segment.bytes = 1073741824
+	log.segment.delete.delay.ms = 60000
+	max.connection.creation.rate = 2147483647
+	max.connections = 2147483647
+	max.connections.per.ip = 2147483647
+	max.connections.per.ip.overrides = 
+	max.incremental.fetch.session.cache.slots = 1000
+	message.max.bytes = 1048588
+	metadata.log.dir = /var/folders/75/jtzvphp97m3c952tknqr_8th0000gn/T/kafka-15855154683006439918/controller_0
+	metadata.log.max.record.bytes.between.snapshots = 20971520
+	metadata.log.max.snapshot.interval.ms = 3600000
+	metadata.log.segment.bytes = 1073741824
+	metadata.log.segment.min.bytes = 8388608
+	metadata.log.segment.ms = 604800000
+	metadata.max.idle.interval.ms = 500
+	metadata.max.retention.bytes = 104857600
+	metadata.max.retention.ms = 604800000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	min.insync.replicas = 1
+	node.id = 0
+	num.io.threads = 8
+	num.network.threads = 3
+	num.partitions = 1
+	num.recovery.threads.per.data.dir = 1
+	num.replica.alter.log.dirs.threads = null
+	num.replica.fetchers = 1
+	offset.metadata.max.bytes = 4096
+	offsets.commit.required.acks = -1
+	offsets.commit.timeout.ms = 5000
+	offsets.load.buffer.size = 5242880
+	offsets.retention.check.interval.ms = 600000
+	offsets.retention.minutes = 10080
+	offsets.topic.compression.codec = 0
+	offsets.topic.num.partitions = 50
+	offsets.topic.replication.factor = 1
+	offsets.topic.segment.bytes = 104857600
+	password.encoder.cipher.algorithm = AES/CBC/PKCS5Padding
+	password.encoder.iterations = 4096
+	password.encoder.key.length = 128
+	password.encoder.keyfactory.algorithm = null
+	password.encoder.old.secret = null
+	password.encoder.secret = null
+	principal.builder.class = class org.apache.kafka.common.security.authenticator.DefaultKafkaPrincipalBuilder
+	process.roles = [broker, controller]
+	producer.id.expiration.check.interval.ms = 600000
+	producer.id.expiration.ms = 86400000
+	producer.purgatory.purge.interval.requests = 1000
+	queued.max.request.bytes = -1
+	queued.max.requests = 500
+	quota.window.num = 11
+	quota.window.size.seconds = 1
+	remote.log.index.file.cache.total.size.bytes = 1073741824
+	remote.log.manager.task.interval.ms = 30000
+	remote.log.manager.task.retry.backoff.max.ms = 30000
+	remote.log.manager.task.retry.backoff.ms = 500
+	remote.log.manager.task.retry.jitter = 0.2
+	remote.log.manager.thread.pool.size = 10
+	remote.log.metadata.custom.metadata.max.bytes = 128
+	remote.log.metadata.manager.class.name = org.apache.kafka.server.log.remote.metadata.storage.TopicBasedRemoteLogMetadataManager
+	remote.log.metadata.manager.class.path = null
+	remote.log.metadata.manager.impl.prefix = rlmm.config.
+	remote.log.metadata.manager.listener.name = null
+	remote.log.reader.max.pending.tasks = 100
+	remote.log.reader.threads = 10
+	remote.log.storage.manager.class.name = null
+	remote.log.storage.manager.class.path = null
+	remote.log.storage.manager.impl.prefix = rsm.config.
+	remote.log.storage.system.enable = false
+	replica.fetch.backoff.ms = 1000
+	replica.fetch.max.bytes = 1048576
+	replica.fetch.min.bytes = 1
+	replica.fetch.response.max.bytes = 10485760
+	replica.fetch.wait.max.ms = 500
+	replica.high.watermark.checkpoint.interval.ms = 5000
+	replica.lag.time.max.ms = 30000
+	replica.selector.class = null
+	replica.socket.receive.buffer.bytes = 65536
+	replica.socket.timeout.ms = 30000
+	replication.quota.window.num = 11
+	replication.quota.window.size.seconds = 1
+	request.timeout.ms = 30000
+	reserved.broker.max.id = 1000
+	sasl.client.callback.handler.class = null
+	sasl.enabled.mechanisms = [GSSAPI]
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.principal.to.local.rules = [DEFAULT]
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism.controller.protocol = GSSAPI
+	sasl.mechanism.inter.broker.protocol = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	sasl.server.callback.handler.class = null
+	sasl.server.max.receive.size = 524288
+	security.inter.broker.protocol = PLAINTEXT
+	security.providers = null
+	server.max.startup.time.ms = 600000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	socket.listen.backlog.size = 50
+	socket.receive.buffer.bytes = 102400
+	socket.request.max.bytes = 104857600
+	socket.send.buffer.bytes = 102400
+	ssl.cipher.suites = []
+	ssl.client.auth = none
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.principal.mapping.rules = DEFAULT
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.abort.timed.out.transaction.cleanup.interval.ms = 10000
+	transaction.max.timeout.ms = 900000
+	transaction.partition.verification.enable = true
+	transaction.remove.expired.transaction.cleanup.interval.ms = 3600000
+	transaction.state.log.load.buffer.size = 5242880
+	transaction.state.log.min.isr = 2
+	transaction.state.log.num.partitions = 50
+	transaction.state.log.replication.factor = 3
+	transaction.state.log.segment.bytes = 104857600
+	transactional.id.expiration.ms = 604800000
+	unclean.leader.election.enable = false
+	unstable.api.versions.enable = false
+	zookeeper.clientCnxnSocket = null
+	zookeeper.connect = null
+	zookeeper.connection.timeout.ms = null
+	zookeeper.max.in.flight.requests = 10
+	zookeeper.metadata.migration.enable = false
+	zookeeper.metadata.migration.min.batch.size = 200
+	zookeeper.session.timeout.ms = 18000
+	zookeeper.set.acl = false
+	zookeeper.ssl.cipher.suites = null
+	zookeeper.ssl.client.enable = false
+	zookeeper.ssl.crl.enable = false
+	zookeeper.ssl.enabled.protocols = null
+	zookeeper.ssl.endpoint.identification.algorithm = HTTPS
+	zookeeper.ssl.keystore.location = null
+	zookeeper.ssl.keystore.password = null
+	zookeeper.ssl.keystore.type = null
+	zookeeper.ssl.ocsp.enable = false
+	zookeeper.ssl.protocol = TLSv1.2
+	zookeeper.ssl.truststore.location = null
+	zookeeper.ssl.truststore.password = null
+	zookeeper.ssl.truststore.type = null
+
+2025-06-20T11:40:19.223-07:00  INFO 12956 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Waiting for the broker to be unfenced
+2025-06-20T11:40:19.223-07:00  INFO 12956 --- [0-event-handler] o.a.k.controller.BrokerHeartbeatManager  : [QuorumController id=0] The request from broker 0 to unfence has been granted because it has caught up with the offset of its register broker record 5.
+2025-06-20T11:40:19.225-07:00  INFO 12956 --- [0-event-handler] o.a.k.controller.ClusterControlManager   : [QuorumController id=0] Replayed BrokerRegistrationChangeRecord modifying the registration for broker 0: BrokerRegistrationChangeRecord(brokerId=0, brokerEpoch=5, fenced=-1, inControlledShutdown=0)
+2025-06-20T11:40:19.256-07:00  INFO 12956 --- [channel-manager] kafka.server.BrokerLifecycleManager      : [BrokerLifecycleManager id=0] The broker has been unfenced. Transitioning from RECOVERY to RUNNING.
+2025-06-20T11:40:19.256-07:00  INFO 12956 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Finished waiting for the broker to be unfenced
+2025-06-20T11:40:19.257-07:00  INFO 12956 --- [-kit-executor-3] o.a.k.s.network.EndpointReadyFutures     : authorizerStart completed for endpoint EXTERNAL. Endpoint is now READY.
+2025-06-20T11:40:19.257-07:00  INFO 12956 --- [-kit-executor-3] kafka.network.SocketServer               : [SocketServer listenerType=BROKER, nodeId=0] Enabling request processing.
+2025-06-20T11:40:19.257-07:00  INFO 12956 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Waiting for all of the authorizer futures to be completed
+2025-06-20T11:40:19.257-07:00  INFO 12956 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Finished waiting for all of the authorizer futures to be completed
+2025-06-20T11:40:19.257-07:00  INFO 12956 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Waiting for all of the SocketServer Acceptors to be started
+2025-06-20T11:40:19.257-07:00  INFO 12956 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Finished waiting for all of the SocketServer Acceptors to be started
+2025-06-20T11:40:19.257-07:00  INFO 12956 --- [-kit-executor-3] kafka.server.BrokerServer                : [BrokerServer id=0] Transition from STARTING to STARTED
+2025-06-20T11:40:19.264-07:00  INFO 12956 --- [           main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:54209]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-06-20T11:40:19.272-07:00  INFO 12956 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.2
+2025-06-20T11:40:19.272-07:00  INFO 12956 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c4deed513057c94e
+2025-06-20T11:40:19.272-07:00  INFO 12956 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750444819272
+2025-06-20T11:40:19.275-07:00  INFO 12956 --- [| adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2025-06-20T11:40:19.275-07:00  INFO 12956 --- [| adminclient-1] o.a.k.c.a.i.AdminMetadataManager         : [AdminClient clientId=adminclient-1] Metadata update failed
+
+org.apache.kafka.common.errors.TimeoutException: Timed out waiting to send the call. Call: fetchMetadata
+
+2025-06-20T11:40:19.276-07:00  INFO 12956 --- [| adminclient-1] o.a.k.clients.admin.KafkaAdminClient     : [AdminClient clientId=adminclient-1] Timed out 1 remaining operation(s) during close.
+2025-06-20T11:40:19.278-07:00  INFO 12956 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-06-20T11:40:19.278-07:00  INFO 12956 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-06-20T11:40:19.278-07:00  INFO 12956 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-06-20T11:40:19.282-07:00  INFO 12956 --- [           main] com.jpmc.midascore.TaskFourTests         : Starting TaskFourTests using Java 22 with PID 12956 (started by blay in /Users/blay/Desktop/blay-forage-midas)
+2025-06-20T11:40:19.283-07:00  INFO 12956 --- [           main] com.jpmc.midascore.TaskFourTests         : No active profile set, falling back to 1 default profile: "default"
+2025-06-20T11:40:19.523-07:00  INFO 12956 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-20T11:40:19.541-07:00  INFO 12956 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+2025-06-20T11:40:19.746-07:00  INFO 12956 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-20T11:40:19.775-07:00  INFO 12956 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-06-20T11:40:19.791-07:00  INFO 12956 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-20T11:40:19.890-07:00  INFO 12956 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-20T11:40:19.902-07:00  INFO 12956 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-20T11:40:19.986-07:00  INFO 12956 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-06-20T11:40:19.986-07:00  INFO 12956 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-20T11:40:20.000-07:00  WARN 12956 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-20T11:40:20.408-07:00  INFO 12956 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: drop table if exists transaction_record cascade 
+Hibernate: drop table if exists user_record cascade 
+Hibernate: drop sequence if exists user_record_seq
+Hibernate: create sequence user_record_seq start with 1 increment by 50
+Hibernate: create table transaction_record (amount float(24) not null, incentive float(24) not null, id bigint generated by default as identity, recipient_id bigint not null, sender_id bigint not null, primary key (id))
+Hibernate: create table user_record (balance float(24) not null, id bigint not null, name varchar(255) not null, primary key (id))
+Hibernate: alter table if exists transaction_record add constraint FKss86ywfkf0yh50h4g1sf8wc2r foreign key (recipient_id) references user_record
+Hibernate: alter table if exists transaction_record add constraint FKobsbg5y9q54y8psf0yt4mn2ac foreign key (sender_id) references user_record
+2025-06-20T11:40:20.424-07:00  INFO 12956 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-20T11:40:20.684-07:00  WARN 12956 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-20T11:40:20.800-07:00  INFO 12956 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-06-20T11:40:20.857-07:00  INFO 12956 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-midas-core-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = midas-core-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-06-20T11:40:20.874-07:00  INFO 12956 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.2
+2025-06-20T11:40:20.874-07:00  INFO 12956 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c4deed513057c94e
+2025-06-20T11:40:20.874-07:00  INFO 12956 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750444820874
+2025-06-20T11:40:20.874-07:00  INFO 12956 --- [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Subscribed to topic(s): transactions
+2025-06-20T11:40:20.883-07:00  INFO 12956 --- [           main] com.jpmc.midascore.TaskFourTests         : Started TaskFourTests in 2.421 seconds (process running for 2.838)
+2025-06-20T11:40:20.926-07:00  INFO 12956 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Cluster ID: DUY1rlX3TraCf3a8NC4YXg
+2025-06-20T11:40:20.929-07:00  INFO 12956 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-20T11:40:20.930-07:00  INFO 12956 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] (Re-)joining group
+2025-06-20T11:40:20.940-07:00  INFO 12956 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Request joining group due to: need to re-join with the given member-id: consumer-midas-core-group-1-1a058611-731f-43d0-8795-dd6fbb791800
+2025-06-20T11:40:20.940-07:00  INFO 12956 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2025-06-20T11:40:20.940-07:00  INFO 12956 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] (Re-)joining group
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/Users/blay/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.13/byte-buddy-agent-1.14.13.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+Hibernate: select next value for user_record_seq
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+Hibernate: select next value for user_record_seq
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+Hibernate: insert into user_record (balance,name,id) values (?,?,?)
+2025-06-20T11:40:21.222-07:00  INFO 12956 --- [           main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2025-06-20T11:40:21.226-07:00  INFO 12956 --- [           main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-06-20T11:40:21.230-07:00  INFO 12956 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.2
+2025-06-20T11:40:21.231-07:00  INFO 12956 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c4deed513057c94e
+2025-06-20T11:40:21.231-07:00  INFO 12956 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750444821230
+2025-06-20T11:40:21.237-07:00  INFO 12956 --- [ad | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: DUY1rlX3TraCf3a8NC4YXg
+2025-06-20T11:40:21.350-07:00  INFO 12956 --- [ad | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 2000 with epoch 0
+2025-06-20T11:40:23.253-07:00  INFO 12956 --- [           main] com.jpmc.midascore.TaskFourTests         : ----------------------------------------------------------
+2025-06-20T11:40:23.253-07:00  INFO 12956 --- [           main] com.jpmc.midascore.TaskFourTests         : ----------------------------------------------------------
+2025-06-20T11:40:23.253-07:00  INFO 12956 --- [           main] com.jpmc.midascore.TaskFourTests         : ----------------------------------------------------------
+2025-06-20T11:40:23.253-07:00  INFO 12956 --- [           main] com.jpmc.midascore.TaskFourTests         : use your debugger to find out what wilbur's balance is after all transactions are processed
+2025-06-20T11:40:23.253-07:00  INFO 12956 --- [           main] com.jpmc.midascore.TaskFourTests         : kill this test once you find the answer
+2025-06-20T11:40:23.975-07:00  INFO 12956 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Successfully joined group with generation Generation{generationId=22, memberId='consumer-midas-core-group-1-1a058611-731f-43d0-8795-dd6fbb791800', protocol='range'}
+2025-06-20T11:40:23.982-07:00  INFO 12956 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Finished assignment for group at generation 22: {consumer-midas-core-group-1-1a058611-731f-43d0-8795-dd6fbb791800=Assignment(partitions=[transactions-0])}
+2025-06-20T11:40:24.072-07:00  INFO 12956 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Successfully synced group in generation Generation{generationId=22, memberId='consumer-midas-core-group-1-1a058611-731f-43d0-8795-dd6fbb791800', protocol='range'}
+2025-06-20T11:40:24.072-07:00  INFO 12956 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Notifying assignor about the new Assignment(partitions=[transactions-0])
+2025-06-20T11:40:24.073-07:00  INFO 12956 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Adding newly assigned partitions: transactions-0
+2025-06-20T11:40:24.087-07:00  INFO 12956 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-midas-core-group-1, groupId=midas-core-group] Setting offset for partition transactions-0 to the committed offset FetchPosition{offset=179, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=2}}
+2025-06-20T11:40:24.188-07:00  INFO 12956 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : midas-core-group: partitions assigned: [transactions-0]
+2025-06-20T11:40:24.434-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #1: Transaction {senderId=9, recipientId=10, amount=16.0}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.451-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Calling incentive API for transaction: Transaction {senderId=9, recipientId=10, amount=16.0}
+2025-06-20T11:40:24.481-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Error calling incentive API, using fallback incentive of 0: 405 Method Not Allowed: "{<EOL>"servlet":"org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4d02f94e",<EOL>"message":"HTTP method POST is not supported by this URL",<EOL>"url":"/incentive",<EOL>"status":"405"<EOL>}"
+Hibernate: insert into transaction_record (amount,incentive,recipient_id,sender_id,id) values (?,?,?,?,default)
+2025-06-20T11:40:24.485-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: wilbur -> antonio amount: 16.0, incentive: 0.0
+2025-06-20T11:40:24.485-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances - wilbur: 3460.21, antonio: 2137.54
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.name=?
+2025-06-20T11:40:24.527-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : WILBUR BALANCE: 3460.21
+2025-06-20T11:40:24.528-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #2: Transaction {senderId=4, recipientId=2, amount=166.75}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.529-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction rejected: Insufficient balance. Sender mario has 12.34, needs 166.75
+2025-06-20T11:40:24.529-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #3: Transaction {senderId=9, recipientId=5, amount=8.0}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.530-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Calling incentive API for transaction: Transaction {senderId=9, recipientId=5, amount=8.0}
+2025-06-20T11:40:24.549-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Error calling incentive API, using fallback incentive of 0: 405 Method Not Allowed: "{<EOL>"servlet":"org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4d02f94e",<EOL>"message":"HTTP method POST is not supported by this URL",<EOL>"url":"/incentive",<EOL>"status":"405"<EOL>}"
+Hibernate: insert into transaction_record (amount,incentive,recipient_id,sender_id,id) values (?,?,?,?,default)
+2025-06-20T11:40:24.550-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: wilbur -> waldorf amount: 8.0, incentive: 0.0
+2025-06-20T11:40:24.550-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances - wilbur: 3452.21, waldorf: 452.55
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.name=?
+2025-06-20T11:40:24.551-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : WILBUR BALANCE: 3452.21
+2025-06-20T11:40:24.552-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #4: Transaction {senderId=6, recipientId=7, amount=63.55}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.552-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Calling incentive API for transaction: Transaction {senderId=6, recipientId=7, amount=63.55}
+2025-06-20T11:40:24.557-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Error calling incentive API, using fallback incentive of 0: 405 Method Not Allowed: "{<EOL>"servlet":"org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4d02f94e",<EOL>"message":"HTTP method POST is not supported by this URL",<EOL>"url":"/incentive",<EOL>"status":"405"<EOL>}"
+Hibernate: insert into transaction_record (amount,incentive,recipient_id,sender_id,id) values (?,?,?,?,default)
+2025-06-20T11:40:24.558-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: whosit -> whatsit amount: 63.55, incentive: 0.0
+2025-06-20T11:40:24.558-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances - whosit: 825.35004, whatsit: 841.14996
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.name=?
+2025-06-20T11:40:24.559-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : WILBUR BALANCE: 3452.21
+2025-06-20T11:40:24.560-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #5: Transaction {senderId=2, recipientId=6, amount=99.56}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.560-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Calling incentive API for transaction: Transaction {senderId=2, recipientId=6, amount=99.56}
+2025-06-20T11:40:24.563-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Error calling incentive API, using fallback incentive of 0: 405 Method Not Allowed: "{<EOL>"servlet":"org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4d02f94e",<EOL>"message":"HTTP method POST is not supported by this URL",<EOL>"url":"/incentive",<EOL>"status":"405"<EOL>}"
+Hibernate: insert into transaction_record (amount,incentive,recipient_id,sender_id,id) values (?,?,?,?,default)
+2025-06-20T11:40:24.564-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: grommit -> whosit amount: 99.56, incentive: 0.0
+2025-06-20T11:40:24.564-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances - grommit: 2115.81, whosit: 924.91003
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.name=?
+2025-06-20T11:40:24.565-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : WILBUR BALANCE: 3452.21
+2025-06-20T11:40:24.565-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #6: Transaction {senderId=8, recipientId=3, amount=108.1}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.566-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction rejected: Insufficient balance. Sender howsit has 68.7, needs 108.1
+2025-06-20T11:40:24.566-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #7: Transaction {senderId=5, recipientId=1, amount=49.56}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.567-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Calling incentive API for transaction: Transaction {senderId=5, recipientId=1, amount=49.56}
+2025-06-20T11:40:24.570-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Error calling incentive API, using fallback incentive of 0: 405 Method Not Allowed: "{<EOL>"servlet":"org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4d02f94e",<EOL>"message":"HTTP method POST is not supported by this URL",<EOL>"url":"/incentive",<EOL>"status":"405"<EOL>}"
+Hibernate: insert into transaction_record (amount,incentive,recipient_id,sender_id,id) values (?,?,?,?,default)
+2025-06-20T11:40:24.571-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: waldorf -> bernie amount: 49.56, incentive: 0.0
+2025-06-20T11:40:24.571-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances - waldorf: 402.99, bernie: 1249.79
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.name=?
+2025-06-20T11:40:24.572-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : WILBUR BALANCE: 3452.21
+2025-06-20T11:40:24.572-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #8: Transaction {senderId=8, recipientId=10, amount=33.39}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.573-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Calling incentive API for transaction: Transaction {senderId=8, recipientId=10, amount=33.39}
+2025-06-20T11:40:24.576-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Error calling incentive API, using fallback incentive of 0: 405 Method Not Allowed: "{<EOL>"servlet":"org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4d02f94e",<EOL>"message":"HTTP method POST is not supported by this URL",<EOL>"url":"/incentive",<EOL>"status":"405"<EOL>}"
+Hibernate: insert into transaction_record (amount,incentive,recipient_id,sender_id,id) values (?,?,?,?,default)
+2025-06-20T11:40:24.577-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: howsit -> antonio amount: 33.39, incentive: 0.0
+2025-06-20T11:40:24.577-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances - howsit: 35.309998, antonio: 2170.93
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.name=?
+2025-06-20T11:40:24.578-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : WILBUR BALANCE: 3452.21
+2025-06-20T11:40:24.578-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #9: Transaction {senderId=10, recipientId=8, amount=133.65}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.579-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Calling incentive API for transaction: Transaction {senderId=10, recipientId=8, amount=133.65}
+2025-06-20T11:40:24.581-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Error calling incentive API, using fallback incentive of 0: 405 Method Not Allowed: "{<EOL>"servlet":"org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4d02f94e",<EOL>"message":"HTTP method POST is not supported by this URL",<EOL>"url":"/incentive",<EOL>"status":"405"<EOL>}"
+Hibernate: insert into transaction_record (amount,incentive,recipient_id,sender_id,id) values (?,?,?,?,default)
+2025-06-20T11:40:24.582-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: antonio -> howsit amount: 133.65, incentive: 0.0
+2025-06-20T11:40:24.582-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances - antonio: 2037.2799, howsit: 168.95999
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.name=?
+2025-06-20T11:40:24.583-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : WILBUR BALANCE: 3452.21
+2025-06-20T11:40:24.584-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #10: Transaction {senderId=3, recipientId=10, amount=105.96}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.584-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Calling incentive API for transaction: Transaction {senderId=3, recipientId=10, amount=105.96}
+2025-06-20T11:40:24.587-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Error calling incentive API, using fallback incentive of 0: 405 Method Not Allowed: "{<EOL>"servlet":"org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4d02f94e",<EOL>"message":"HTTP method POST is not supported by this URL",<EOL>"url":"/incentive",<EOL>"status":"405"<EOL>}"
+Hibernate: insert into transaction_record (amount,incentive,recipient_id,sender_id,id) values (?,?,?,?,default)
+2025-06-20T11:40:24.588-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: maria -> antonio amount: 105.96, incentive: 0.0
+2025-06-20T11:40:24.588-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances - maria: 2668.18, antonio: 2143.24
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.name=?
+2025-06-20T11:40:24.589-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : WILBUR BALANCE: 3452.21
+2025-06-20T11:40:24.590-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #11: Transaction {senderId=10, recipientId=5, amount=154.1}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.591-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Calling incentive API for transaction: Transaction {senderId=10, recipientId=5, amount=154.1}
+2025-06-20T11:40:24.594-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Error calling incentive API, using fallback incentive of 0: 405 Method Not Allowed: "{<EOL>"servlet":"org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4d02f94e",<EOL>"message":"HTTP method POST is not supported by this URL",<EOL>"url":"/incentive",<EOL>"status":"405"<EOL>}"
+Hibernate: insert into transaction_record (amount,incentive,recipient_id,sender_id,id) values (?,?,?,?,default)
+2025-06-20T11:40:24.595-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: antonio -> waldorf amount: 154.1, incentive: 0.0
+2025-06-20T11:40:24.595-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances - antonio: 1989.14, waldorf: 557.08997
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.name=?
+2025-06-20T11:40:24.596-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : WILBUR BALANCE: 3452.21
+2025-06-20T11:40:24.597-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #12: Transaction {senderId=5, recipientId=6, amount=75.67}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.597-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Calling incentive API for transaction: Transaction {senderId=5, recipientId=6, amount=75.67}
+2025-06-20T11:40:24.619-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Error calling incentive API, using fallback incentive of 0: 405 Method Not Allowed: "{<EOL>"servlet":"org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4d02f94e",<EOL>"message":"HTTP method POST is not supported by this URL",<EOL>"url":"/incentive",<EOL>"status":"405"<EOL>}"
+Hibernate: insert into transaction_record (amount,incentive,recipient_id,sender_id,id) values (?,?,?,?,default)
+2025-06-20T11:40:24.620-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: waldorf -> whosit amount: 75.67, incentive: 0.0
+2025-06-20T11:40:24.620-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances - waldorf: 481.41998, whosit: 1000.58
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.name=?
+2025-06-20T11:40:24.621-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : WILBUR BALANCE: 3452.21
+2025-06-20T11:40:24.622-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #13: Transaction {senderId=1, recipientId=5, amount=1.98}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.622-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Calling incentive API for transaction: Transaction {senderId=1, recipientId=5, amount=1.98}
+2025-06-20T11:40:24.627-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Error calling incentive API, using fallback incentive of 0: 405 Method Not Allowed: "{<EOL>"servlet":"org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4d02f94e",<EOL>"message":"HTTP method POST is not supported by this URL",<EOL>"url":"/incentive",<EOL>"status":"405"<EOL>}"
+Hibernate: insert into transaction_record (amount,incentive,recipient_id,sender_id,id) values (?,?,?,?,default)
+2025-06-20T11:40:24.628-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: bernie -> waldorf amount: 1.98, incentive: 0.0
+2025-06-20T11:40:24.628-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances - bernie: 1247.81, waldorf: 483.4
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.name=?
+2025-06-20T11:40:24.629-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : WILBUR BALANCE: 3452.21
+2025-06-20T11:40:24.630-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #14: Transaction {senderId=6, recipientId=7, amount=112.43}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.630-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Calling incentive API for transaction: Transaction {senderId=6, recipientId=7, amount=112.43}
+2025-06-20T11:40:24.633-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Error calling incentive API, using fallback incentive of 0: 405 Method Not Allowed: "{<EOL>"servlet":"org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4d02f94e",<EOL>"message":"HTTP method POST is not supported by this URL",<EOL>"url":"/incentive",<EOL>"status":"405"<EOL>}"
+Hibernate: insert into transaction_record (amount,incentive,recipient_id,sender_id,id) values (?,?,?,?,default)
+2025-06-20T11:40:24.634-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: whosit -> whatsit amount: 112.43, incentive: 0.0
+2025-06-20T11:40:24.634-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances - whosit: 888.15, whatsit: 953.57996
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.name=?
+2025-06-20T11:40:24.635-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : WILBUR BALANCE: 3452.21
+2025-06-20T11:40:24.635-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #15: Transaction {senderId=9, recipientId=1, amount=130.37}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.636-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Calling incentive API for transaction: Transaction {senderId=9, recipientId=1, amount=130.37}
+2025-06-20T11:40:24.638-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Error calling incentive API, using fallback incentive of 0: 405 Method Not Allowed: "{<EOL>"servlet":"org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4d02f94e",<EOL>"message":"HTTP method POST is not supported by this URL",<EOL>"url":"/incentive",<EOL>"status":"405"<EOL>}"
+Hibernate: insert into transaction_record (amount,incentive,recipient_id,sender_id,id) values (?,?,?,?,default)
+2025-06-20T11:40:24.639-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: wilbur -> bernie amount: 130.37, incentive: 0.0
+2025-06-20T11:40:24.639-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances - wilbur: 3321.8398, bernie: 1378.18
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.name=?
+2025-06-20T11:40:24.640-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : WILBUR BALANCE: 3321.8398
+2025-06-20T11:40:24.640-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #16: Transaction {senderId=7, recipientId=10, amount=197.5}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.641-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Calling incentive API for transaction: Transaction {senderId=7, recipientId=10, amount=197.5}
+2025-06-20T11:40:24.643-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Error calling incentive API, using fallback incentive of 0: 405 Method Not Allowed: "{<EOL>"servlet":"org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4d02f94e",<EOL>"message":"HTTP method POST is not supported by this URL",<EOL>"url":"/incentive",<EOL>"status":"405"<EOL>}"
+Hibernate: insert into transaction_record (amount,incentive,recipient_id,sender_id,id) values (?,?,?,?,default)
+2025-06-20T11:40:24.644-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: whatsit -> antonio amount: 197.5, incentive: 0.0
+2025-06-20T11:40:24.644-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances - whatsit: 756.07996, antonio: 2186.6401
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.name=?
+2025-06-20T11:40:24.645-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : WILBUR BALANCE: 3321.8398
+2025-06-20T11:40:24.645-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #17: Transaction {senderId=1, recipientId=7, amount=6.83}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.646-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Calling incentive API for transaction: Transaction {senderId=1, recipientId=7, amount=6.83}
+2025-06-20T11:40:24.648-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Error calling incentive API, using fallback incentive of 0: 405 Method Not Allowed: "{<EOL>"servlet":"org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4d02f94e",<EOL>"message":"HTTP method POST is not supported by this URL",<EOL>"url":"/incentive",<EOL>"status":"405"<EOL>}"
+Hibernate: insert into transaction_record (amount,incentive,recipient_id,sender_id,id) values (?,?,?,?,default)
+2025-06-20T11:40:24.648-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: bernie -> whatsit amount: 6.83, incentive: 0.0
+2025-06-20T11:40:24.649-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances - bernie: 1371.3501, whatsit: 762.91
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.name=?
+2025-06-20T11:40:24.650-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : WILBUR BALANCE: 3321.8398
+2025-06-20T11:40:24.650-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #18: Transaction {senderId=9, recipientId=7, amount=128.47}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.651-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Calling incentive API for transaction: Transaction {senderId=9, recipientId=7, amount=128.47}
+2025-06-20T11:40:24.654-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Error calling incentive API, using fallback incentive of 0: 405 Method Not Allowed: "{<EOL>"servlet":"org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4d02f94e",<EOL>"message":"HTTP method POST is not supported by this URL",<EOL>"url":"/incentive",<EOL>"status":"405"<EOL>}"
+Hibernate: insert into transaction_record (amount,incentive,recipient_id,sender_id,id) values (?,?,?,?,default)
+2025-06-20T11:40:24.654-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: wilbur -> whatsit amount: 128.47, incentive: 0.0
+2025-06-20T11:40:24.654-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances - wilbur: 3193.3699, whatsit: 891.38
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.name=?
+2025-06-20T11:40:24.655-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : WILBUR BALANCE: 3193.3699
+2025-06-20T11:40:24.656-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #19: Transaction {senderId=5, recipientId=6, amount=47.4}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.656-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Calling incentive API for transaction: Transaction {senderId=5, recipientId=6, amount=47.4}
+2025-06-20T11:40:24.659-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Error calling incentive API, using fallback incentive of 0: 405 Method Not Allowed: "{<EOL>"servlet":"org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4d02f94e",<EOL>"message":"HTTP method POST is not supported by this URL",<EOL>"url":"/incentive",<EOL>"status":"405"<EOL>}"
+Hibernate: insert into transaction_record (amount,incentive,recipient_id,sender_id,id) values (?,?,?,?,default)
+2025-06-20T11:40:24.659-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: waldorf -> whosit amount: 47.4, incentive: 0.0
+2025-06-20T11:40:24.659-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances - waldorf: 436.0, whosit: 935.55005
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.name=?
+2025-06-20T11:40:24.660-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : WILBUR BALANCE: 3193.3699
+2025-06-20T11:40:24.660-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #20: Transaction {senderId=9, recipientId=6, amount=103.95}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.661-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Calling incentive API for transaction: Transaction {senderId=9, recipientId=6, amount=103.95}
+2025-06-20T11:40:24.664-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Error calling incentive API, using fallback incentive of 0: 405 Method Not Allowed: "{<EOL>"servlet":"org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4d02f94e",<EOL>"message":"HTTP method POST is not supported by this URL",<EOL>"url":"/incentive",<EOL>"status":"405"<EOL>}"
+Hibernate: insert into transaction_record (amount,incentive,recipient_id,sender_id,id) values (?,?,?,?,default)
+2025-06-20T11:40:24.664-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: wilbur -> whosit amount: 103.95, incentive: 0.0
+2025-06-20T11:40:24.664-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances - wilbur: 3089.42, whosit: 1039.5
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.name=?
+2025-06-20T11:40:24.665-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : WILBUR BALANCE: 3089.42
+2025-06-20T11:40:24.666-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #21: Transaction {senderId=6, recipientId=5, amount=20.58}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.666-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Calling incentive API for transaction: Transaction {senderId=6, recipientId=5, amount=20.58}
+2025-06-20T11:40:24.669-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Error calling incentive API, using fallback incentive of 0: 405 Method Not Allowed: "{<EOL>"servlet":"org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4d02f94e",<EOL>"message":"HTTP method POST is not supported by this URL",<EOL>"url":"/incentive",<EOL>"status":"405"<EOL>}"
+Hibernate: insert into transaction_record (amount,incentive,recipient_id,sender_id,id) values (?,?,?,?,default)
+2025-06-20T11:40:24.669-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: whosit -> waldorf amount: 20.58, incentive: 0.0
+2025-06-20T11:40:24.669-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances - whosit: 1018.92, waldorf: 456.58
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.name=?
+2025-06-20T11:40:24.670-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : WILBUR BALANCE: 3089.42
+2025-06-20T11:40:24.671-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Received transaction #22: Transaction {senderId=8, recipientId=3, amount=168.57}
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.id=?
+2025-06-20T11:40:24.671-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Calling incentive API for transaction: Transaction {senderId=8, recipientId=3, amount=168.57}
+2025-06-20T11:40:24.674-07:00  WARN 12956 --- [ntainer#0-0-C-1] c.j.m.component.IncentiveService         : Error calling incentive API, using fallback incentive of 0: 405 Method Not Allowed: "{<EOL>"servlet":"org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4d02f94e",<EOL>"message":"HTTP method POST is not supported by this URL",<EOL>"url":"/incentive",<EOL>"status":"405"<EOL>}"
+Hibernate: insert into transaction_record (amount,incentive,recipient_id,sender_id,id) values (?,?,?,?,default)
+2025-06-20T11:40:24.674-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : Transaction processed successfully: howsit -> maria amount: 168.57, incentive: 0.0
+2025-06-20T11:40:24.674-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : New balances - howsit: 0.38998413, maria: 2836.75
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: update user_record set balance=?,name=? where id=?
+Hibernate: select ur1_0.id,ur1_0.balance,ur1_0.name from user_record ur1_0 where ur1_0.name=?
+2025-06-20T11:40:24.675-07:00  INFO 12956 --- [ntainer#0-0-C-1] c.j.m.c.TransactionKafkaListener         : WILBUR BALANCE: 3089.42
+2025-06-20T11:40:43.258-07:00  INFO 12956 --- [           main] com.jpmc.midascore.TaskFourTests         : ...
+2025-06-20T11:41:03.264-07:00  INFO 12956 --- [           main] com.jpmc.midascore.TaskFourTests         : ...
+[INFO] 
+[INFO] Results:
+[INFO] 

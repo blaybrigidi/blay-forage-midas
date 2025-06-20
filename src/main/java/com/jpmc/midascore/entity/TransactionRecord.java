@@ -20,19 +20,28 @@ public class TransactionRecord {
     @Column(nullable = false)
     private float amount;
 
+    @Column(nullable = false)
+    private float incentive;
+
     protected TransactionRecord() {
     }
 
-    public TransactionRecord(UserRecord sender, UserRecord recipient, float amount) {
+    public TransactionRecord(UserRecord sender, UserRecord recipient, float amount, float incentive) {
         this.sender = sender;
         this.recipient = recipient;
         this.amount = amount;
+        this.incentive = incentive;
     }
 
     @Override
     public String toString() {
-        return String.format("TransactionRecord[id=%d, sender=%s, recipient=%s, amount=%f]",
-                id, sender.getName(), recipient.getName(), amount);
+        return "TransactionRecord{" +
+                "id=" + id +
+                ", sender=" + sender.getName() +
+                ", recipient=" + recipient.getName() +
+                ", amount=" + amount +
+                ", incentive=" + incentive +
+                '}';
     }
 
     public Long getId() {
@@ -43,11 +52,31 @@ public class TransactionRecord {
         return sender;
     }
 
+    public void setSender(UserRecord sender) {
+        this.sender = sender;
+    }
+
     public UserRecord getRecipient() {
         return recipient;
     }
 
+    public void setRecipient(UserRecord recipient) {
+        this.recipient = recipient;
+    }
+
     public float getAmount() {
         return amount;
+    }
+
+    public void setAmount(float amount) {
+        this.amount = amount;
+    }
+
+    public float getIncentive() {
+        return incentive;
+    }
+
+    public void setIncentive(float incentive) {
+        this.incentive = incentive;
     }
 }

@@ -26,6 +26,9 @@ public class TransactionKafkaListener {
     @Autowired
     private TransactionRepository transactionRepository;
 
+    @Autowired
+    private IncentiveService incentiveService;
+
     private final List<Transaction> receivedTransactions = new ArrayList<>();
 
     @KafkaListener(topics = "${general.kafka-topic}")
@@ -34,81 +37,59 @@ public class TransactionKafkaListener {
         receivedTransactions.add(transaction);
         logger.info("Received transaction #{}: {}", receivedTransactions.size(), transaction);
 
-        // Log first 4 transactions with special debug info
+        // Validate transaction
+        UserRecord sender = userRepository.findById(transaction.getSenderId());
+        UserRecord recipient = userRepository.findById(transaction.getRecipientId());
+
+        if (sender == null) {
+            logger.warn("Transaction rejected: Invalid sender ID {}", transaction.getSenderId());
+            return;
+        }
+
+        if (recipient == null) {
+            logger.warn("Transaction rejected: Invalid recipient ID {}", transaction.getRecipientId());
+            return;
+        }
+
+        if (sender.getBalance() < transaction.getAmount()) {
+            logger.warn("Transaction rejected: Insufficient balance. Sender {} has {}, needs {}",
+                    sender.getName(), sender.getBalance(), transaction.getAmount());
+            return;
+        }
+
+        // Get incentive amount from API
+        float incentiveAmount = incentiveService.getIncentiveAmount(transaction);
+
+        // Update balances
+        float newSenderBalance = sender.getBalance() - transaction.getAmount();
+        float newRecipientBalance = recipient.getBalance() + transaction.getAmount() + incentiveAmount;
+
+        sender.setBalance(newSenderBalance);
+        recipient.setBalance(newRecipientBalance);
+
+        // Save updated users
+        userRepository.save(sender);
+        userRepository.save(recipient);
+
+        // Create and save transaction record with incentive
+        TransactionRecord transactionRecord = new TransactionRecord(sender, recipient, transaction.getAmount(),
+                incentiveAmount);
+        transactionRepository.save(transactionRecord);
+
+        logger.info("Transaction processed successfully: {} -> {} amount: {}, incentive: {}",
+                sender.getName(), recipient.getName(), transaction.getAmount(), incentiveAmount);
+        logger.info("New balances - {}: {}, {}: {}",
+                sender.getName(), newSenderBalance, recipient.getName(), newRecipientBalance);
+
+        // Log wilbur's balance specifically for debugging TaskFourTests
+        UserRecord wilbur = userRepository.findByName("wilbur");
+        if (wilbur != null) {
+            logger.info("WILBUR BALANCE: {}", wilbur.getBalance());
+        }
+
+        // Debug first 4 transactions
         if (receivedTransactions.size() <= 4) {
-            logger.warn("**DEBUG** Transaction #{}: Amount = {}", receivedTransactions.size(), transaction.getAmount());
-        }
-
-        // For debugging - log summary after first 4
-        if (receivedTransactions.size() == 4) {
-            logger.warn("**DEBUG SUMMARY** First 4 transaction amounts:");
-            for (int i = 0; i < 4; i++) {
-                logger.warn("**DEBUG** Transaction {}: Amount = {}", i + 1, receivedTransactions.get(i).getAmount());
-            }
-        }
-
-        // Validate and process transaction
-        processTransaction(transaction);
-
-        // Log waldorf's balance after each transaction
-        logWaldorfBalance();
-    }
-
-    private void processTransaction(Transaction transaction) {
-        try {
-            // 1. Validate sender exists
-            UserRecord sender = userRepository.findById(transaction.getSenderId());
-            if (sender == null) {
-                logger.warn("Transaction rejected: Invalid senderId {}", transaction.getSenderId());
-                return;
-            }
-
-            // 2. Validate recipient exists
-            UserRecord recipient = userRepository.findById(transaction.getRecipientId());
-            if (recipient == null) {
-                logger.warn("Transaction rejected: Invalid recipientId {}", transaction.getRecipientId());
-                return;
-            }
-
-            // 3. Validate sender has sufficient balance
-            if (sender.getBalance() < transaction.getAmount()) {
-                logger.warn("Transaction rejected: Insufficient balance. Sender {} has {}, needs {}",
-                        sender.getName(), sender.getBalance(), transaction.getAmount());
-                return;
-            }
-
-            // 4. Process valid transaction
-            // Update balances
-            sender.setBalance(sender.getBalance() - transaction.getAmount());
-            recipient.setBalance(recipient.getBalance() + transaction.getAmount());
-
-            // Save updated user records
-            userRepository.save(sender);
-            userRepository.save(recipient);
-
-            // Create and save transaction record
-            TransactionRecord transactionRecord = new TransactionRecord(sender, recipient, transaction.getAmount());
-            transactionRepository.save(transactionRecord);
-
-            logger.info("Transaction processed successfully: {} -> {} amount {}",
-                    sender.getName(), recipient.getName(), transaction.getAmount());
-            logger.info("New balances: {} = {}, {} = {}",
-                    sender.getName(), sender.getBalance(), recipient.getName(), recipient.getBalance());
-
-        } catch (Exception e) {
-            logger.error("Error processing transaction: {}", transaction, e);
-        }
-    }
-
-    private void logWaldorfBalance() {
-        try {
-            UserRecord waldorf = userRepository.findByName("waldorf");
-            if (waldorf != null) {
-                logger.warn("🏦 WALDORF BALANCE: {} (rounded down: {})",
-                        waldorf.getBalance(), (int) Math.floor(waldorf.getBalance()));
-            }
-        } catch (Exception e) {
-            logger.error("Error checking waldorf balance", e);
+            logger.debug("DEBUG - Transaction #{}: amount={}", receivedTransactions.size(), transaction.getAmount());
         }
     }
 
